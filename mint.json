@@ -1,18 +1,18 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Celatone Docs",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
-    "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+    "primary": "#7d75f2",
+    "light": "#b2b2ed",
+    "dark": "#5942f3",
+    "background": {
+      "light": "#f5f5f5",
+      "dark": "#121212"
     }
   },
   "topbarLinks": [
@@ -22,52 +22,49 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Go To Celatone",
+    "url": "https://celat.one"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/alleslabs/celatone-frontend"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "name": "Follow Us",
+      "icon": "twitter",
+      "url": "https://twitter.com/celatone_"
     },
     {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "name": "Changelog",
+      "icon": "list-ul",
+      "url": "resources/changelog"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "pages": ["introduction", "quickstart"]
     },
     {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
-    },
-    {
-      "group": "API Documentation",
-      "pages": ["api-reference/introduction"]
-    },
-    {
-      "group": "Endpoint Examples",
+      "group": "Developer",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        {
+          "group": "Local Deployment",
+          "pages": [
+            "developer/local-deployment/introduction",
+            "developer/local-deployment/dependencies",
+            "developer/local-deployment/indexer",
+            "developer/local-deployment/frontend",
+            "developer/local-deployment/customization"
+          ]
+        }
       ]
+    },
+    {
+      "group": "Resources",
+      "pages": ["resources/changelog"]
     }
   ],
   "footerSocials": {
