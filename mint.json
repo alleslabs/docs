@@ -15,12 +15,6 @@
       "dark": "#121212"
     }
   },
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
-    }
-  ],
   "topbarCtaButton": {
     "name": "Go To Celatone",
     "url": "https://celat.one"
@@ -39,10 +33,10 @@
   ],
   "tabs": [
     {
-        "name": "Changelog",
-        "url": "changelog"
+      "name": "Changelog",
+      "url": "changelog"
     }
-],
+  ],
   "navigation": [
     {
       "group": "Get Started",
@@ -72,5 +66,10 @@
     "twitter": "https://twitter.com/mintlify",
     "github": "https://github.com/mintlify",
     "linkedin": "https://www.linkedin.com/company/mintsearch"
+  },
+  "feedback": {
+    "raiseIssue": true,
+    "suggestEdit": true,
+    "thumbsRating": true
   }
 }
