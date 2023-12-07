@@ -5,6 +5,16 @@ description: ''
 
 The changelog reflects the main and user facing changes. For the full list of all changes and updates, please see the technical changelog [here](https://github.com/alleslabs/celatone-frontend).
 
+- [V1.3.0: Initia and Move VM Support](#v1-3-0-initia-and-move-vm-support)
+- [V1.2.0: JSON Schema, Station Wallet](#v1-2-0-json-schema-station-wallet)
+- [V1.1.0: Osmosis Pools, Proposals, and Recent Contracts](#v1-1-0-osmosis-pools-proposals-and-recent-contracts)
+- [V1.0.5: Terra & osmo-test-5 Support](#v1-0-5-terra--osmo-test-5-support)
+- [V1.0.4: Bug Fixes](#v1-0-4-bug-fixes)
+- [V1.0.3: Account and Transaction Details, Public Accounts, CW2 Info](#v1-0-3-account-and-transaction-details-public-accounts-cw2-info)
+- [V1.0.2: Faucets, Attach Funds, Icons](#v102-faucets-attach-funds-icons)
+- [V1.0.1: Bug Fixes](#v1-0-1-bug-fixes)
+- [V1.0.0: Initial Release](#v1-0-0-initial-release)
+
 ## [V1.3.0: Initia and Move VM Support](https://github.com/alleslabs/celatone-frontend/releases/tag/v1.3.0)
 
 Release Date: 20/11/2023
@@ -39,7 +49,7 @@ For Initia, the account details page has been updated to include
 
 __New Transaction Types__
 
-TBA
+With the new framework support, we have also added support for Initia-specific transaction types.
 
 ### Fixes & Improvements
 
@@ -71,21 +81,41 @@ Release Date: 12/07/2023
 
 ### Osmosis Pools
 
+Celatone now supports include pages Osmosis pools. Users can view the list of pool currently live, filter by pool ID, pool asset symbols and denoms, and filter by pool types.For a given pool, Celatone also shows the pool's details, such as:
+
+- the pool's parameters
+- the pool's asset composition and amounts
+- current pool liquidity
+
+Users can also view the pool's historical transactions, with human readable table entries to be able to find and understand transactions at a glance.
+
 ### Proposal list
 
+We have added a proposal list page showing all the proposals on the Osmosis network. Users can view ongoing and past proposals, search by title and ID, and filter by proposal status and type
+
 ### Create CosmWasm Proposals
+
+Celatone now provide interfaces to create CosmWasm proposals on the Osmosis network. Users can create proposals to
+
+- store code
+- whitelist addresses to be able to deploy contracts permissionlessly
+
+These two functionalities aim to make contract deployment on permissioned CosmWasm chains such as Osmosis easier and more accessible.
 
 ### Recent Contracts
 
 ## [V1.0.5: Terra & osmo-test-5 Support](https://github.com/alleslabs/celatone-frontend/releases/tag/v1.0.5)
 
+Release Date: 19/05/2023
+
 ### Terra Support
+
+Celatone now supports Terra! Developer building on the chain now have access to Celatone's explorer and dev tools suite on both [phoenix-1 mainnet](https://terra.celat.one/phoenix-1) and [pisco-1 testnet](https://terra.celat.one/pisco-1).
 
 ### osmo-test-5 Testnet Support
 
-Release Date: 19/05/2023
+Following the Osmosis osmo-test-4 deprecation, Celatone now supports the new osmo-test-5 testnet. Developers can now deploy and interact with their contracts on the network.
 
-TBA
 
 ## [V1.0.4: Bug Fixes](https://github.com/alleslabs/celatone-frontend/releases/tag/v1.0.4)
 
@@ -107,7 +137,11 @@ Release Date: 03/05/2023
 
 ### Faucet Page
 
+Celatone now has an integrated [faucet page](https://celatone.osmosis.zone/osmo-test-5) for users to request test tokens on the Osmosis testnet. The faucet is currently configured to provide 10 OSMO tokens an hour for a given IP.
+
 ### Improved Attach Funds
+
+When attaching funds to messages, Celatone now allows users to attach any assets that is listed in our [Aldus](https://github.com/alleslabs/aldus) database.
 
 ### Icon Set Overhaul
 

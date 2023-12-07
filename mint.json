@@ -39,7 +39,7 @@
     {
       "name": "Changelog",
       "icon": "list-ul",
-      "url": "resources/changelog"
+      "url": "changelog"
     }
   ],
   "navigation": [
@@ -64,7 +64,7 @@
     },
     {
       "group": "Resources",
-      "pages": ["resources/changelog"]
+      "pages": ["changelog"]
     }
   ],
   "footerSocials": {
