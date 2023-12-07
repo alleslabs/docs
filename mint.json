@@ -35,13 +35,14 @@
       "name": "Follow Us",
       "icon": "twitter",
       "url": "https://twitter.com/celatone_"
-    },
-    {
-      "name": "Changelog",
-      "icon": "list-ul",
-      "url": "changelog"
     }
   ],
+  "tabs": [
+    {
+        "name": "Changelog",
+        "url": "changelog"
+    }
+],
   "navigation": [
     {
       "group": "Get Started",
@@ -64,7 +65,7 @@
     },
     {
       "group": "Resources",
-      "pages": ["changelog"]
+      "pages": ["changelog/changelog"]
     }
   ],
   "footerSocials": {
