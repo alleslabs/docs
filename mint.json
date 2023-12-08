@@ -40,10 +40,10 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart"]
+      "pages": ["introduction", "supported-networks"]
     },
     {
-      "group": "Developer",
+      "group": "For Developers",
       "pages": [
         {
           "group": "Local Deployment",
@@ -56,6 +56,10 @@
           ]
         }
       ]
+    },
+    {
+      "group": "For Projects",
+      "pages": ["projects/aldus"]
     },
     {
       "group": "Resources",
