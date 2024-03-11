@@ -1,0 +1,22 @@
+---
+title: Price Cacher
+---
+
+The Price Cacher service encompasses two major components:
+
+1. A cron job for price data updates
+2. A REST API for data retrieval
+
+## Price Data Update Job
+
+The cron job is responsible for systematically collecting and storing price data from designated sources to a database. It operates on a fixed schedule, running every 5 minutes.
+
+Presently, the assets list (for which we query prices) is principally determined by the assets supported by [Aldus](https://aldus.dev). The price data is sourced from the [CoinGecko](https://coingecko.com) API.
+The integration of this caching technique significantly mitigates the necessity for direct API calls to fetch price data, thereby reducing associated data consultation costs.
+
+## Price Cacher API
+
+The Price Cacher API offers a conduit for accessing the cached price data by third-party clients and services. This system holds the following benefits:
+
+- **Ease of Integration**: Being a REST-based API, it allows any client that supports HTTP requests to directly access relevant data. It offers a considerably simplified method of interaction compared to direct database engagement.
+- **Access Control**: The API holds configurable access policies, capable of limiting client access or enforcing usage rate limits, thereby procuring a more secure and controlled data access environment.

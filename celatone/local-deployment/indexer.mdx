@@ -1,0 +1,57 @@
+---
+title: Setting Up the Indexer
+---
+
+Once Go and Docker is installed and you have cloned the indexer repository locally, navigate to the repository folder. Then checkout the Osmosis node version that you're looking to run. You can see the list of versions we officially support [here](https://github.com/alleslabs/osmosis/releases).
+
+```bash
+# e.g. export OSMOSIS_NODE_VERSION=v16.0.0
+export OSMOSIS_NODE_VERSION=<INSERT_OSMOSIS_NODE_VERSION>
+cd osmosis
+git checkout "${OSMOSIS_NODE_VERSION}-celatone"
+```
+
+To start the indexer, all you need to do is run the following command:
+
+```bash
+docker compose up -d --build
+```
+
+Once all of the Docker services are up and active, the last step in the process is to track all of the chain data from the [Hasura](https://hasura.io/) GraphQL console.
+
+To do so, navigate to [localhost/hasura](http://localhost/hasura). The page should look like something like the one below.
+
+![](/images/screenshots/hasura_homepage.png)
+
+Click on the `Data` tab at the top of the page.
+
+![](/images/screenshots/hasura_data.png)
+
+The available schemas are shown at the top left of the page. Select the default database and public schema.
+
+![](/images/screenshots/hasura_public.png)
+
+Click on `Track All` to track all tables and views available. A confirmation prompt may appear, select Ok to confirm.
+
+![](/images/screenshots/hasura_track_all.png)
+
+The page will then reload. Now click on `Track All` again but this time for all foreign-key relationships
+
+![](/images/screenshots/hasura_track_all_fk.png)
+
+Once all of the tables and views are tracked, the indexer is ready to use! Test it out by running a simple query like the one below:
+
+```graphql
+subscription LatestBlock {
+  blocks(limit: 1, order_by: { height: desc }) {
+    height
+    hash
+    proposer
+    timestamp
+  }
+}
+```
+
+You should get a response similar to the one below
+
+![](/images/screenshots/hasura_query.png)

@@ -1,0 +1,49 @@
+# Ignore build artifacts
+/_site/
+
+# Ignore generated HTML files
+*.html
+
+# Ignore temporary files
+*.tmp
+
+# Ignore cache files
+.cache/
+
+# Ignore logs
+*.log
+
+# Ignore backup files
+*.bak
+
+# Ignore compiled CSS files
+*.css
+
+# Ignore compiled JavaScript files
+*.js
+
+# Ignore images
+*.jpg
+*.jpeg
+*.gif
+
+# Ignore fonts
+*.woff
+*.woff2
+*.ttf
+
+# Ignore vendor directories
+/vendor/
+
+# Ignore node_modules directory
+/node_modules/
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore system files
+.DS_Store
+Thumbs.db

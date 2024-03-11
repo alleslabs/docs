@@ -1,0 +1,110 @@
+---
+title: Setting Up Dependencies
+---
+
+## Setting up Dependencies
+
+<Warning>
+  **Note**: This quickstart assumes that you are using MacOS or Linux. If you are using Windows, we
+  recommend you use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) to run World
+  Engine.
+</Warning>
+
+<AccordionGroup>
+    <Accordion icon="golang" title="Install Go">
+        Celatone's indexer, based off a modified Cosmos SDK node, is written in
+        [Go](https://golang.org).
+
+        To install Go, follow the instructions on the [Go website](https://golang.org/doc/install).
+
+        To verify that Go is installed, run the following command in your terminal:
+
+        ```bash
+        go version
+        ```
+    </Accordion>
+    <Accordion icon="node-js" title="Install NodeJS">
+        To run Celatone's frontend, you first need to install [NodeJS](https://nodejs.org/).
+
+        To install NodeJS, follow the instructions on the [NodeJS website](https://nodejs.org/en/download/).
+
+        To verify that NodeJS is installed, run the following command in your terminal:
+
+        ```bash
+        node -v
+        ```
+
+        For Celatone, we require NodeJS version 18.0.0 or higher.
+    </Accordion>
+    <Accordion icon="yarn" title="Install Yarn">
+        For Celatone's frontend, we use [Yarn](https://yarnpkg.com/) as our package manager.
+
+        To install Yarn, follow the instructions on the [Yarn website](https://yarnpkg.com/getting-started).
+
+        To verify that Yarn is installed, run the following command in your terminal:
+
+        ```bash
+        yarn -v
+        ```
+    </Accordion>
+    <Accordion icon="docker" title="Install Docker">
+        To make it simple to deploy Celatone's infrastructure locally, we use [Docker](https://www.docker.com/).
+
+        Docker is a containerization tool that allows you to run applications in a sandboxed environment; it ensures that the World Engine stack will run the same way on your machine as it will on production deployments.
+
+        To install Docker, follow the instructions on the [Docker website](https://docs.docker.com/get-docker/).
+
+        To verify that Docker is installed, run the following command in your terminal:
+
+        ```bash
+        docker -v
+        ```
+    </Accordion>
+    <Accordion icon="planet-ringed" title="Install OrbStack (Optional — MacOS only)">
+        [OrbStack](https://orbstack.dev) is a tool that makes it easier to run Docker containers on MacOS. It is not
+        required to run Celatone, but it is recommended for MacOS users as it provides a better performance and user experience than
+        Docker Desktop.
+
+        To install OrbStack, follow the instructions on the [OrbStack website](https://orbstack.dev).
+    </Accordion>
+
+</AccordionGroup>
+
+## Installing Celatone Components
+
+Once you have the dependencies installed, you can proceed to install the components of Celatone required to run the explorer
+
+First, clone the Celatone indexer GitHub repository:
+
+<CodeGroup>
+```bash git HTTPS
+git clone https://github.com/alleslabs/osmosis
+```
+
+```bash git SSH
+git clone git@github.com:alleslabs/osmosis.git
+```
+
+```bash gh CLI
+gh repo clone alleslabs/osmosis
+```
+
+</CodeGroup>
+
+Next, clone the Celatone frontend GitHub repository:
+
+<CodeGroup>
+
+```bash git HTTPS
+git clone https://github.com/alleslabs/celatone-frontend
+```
+
+```bash git SSH
+git clone git@github.com:alleslabs/celatone-frontend.git
+```
+
+```bash gh CLI
+gh repo clone alleslabs/celatone-frontend
+```
+
+</CodeGroup>

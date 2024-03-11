@@ -1,0 +1,8 @@
+---
+title: Indexer
+---
+
+The indexer of Celatone is an improved version of the Cosmos SDK chain node. It adds extra logic to index and transfer transactional data into a PostgreSQL database. Although it requires manual effort and regular maintenance, it offers the following benefits:
+
+- **High Flexibility**: Through this method, we have complete control over the data structure and storage by specifying where and how to index the data. This enables us to design an optimized database schema that suits our specific use cases.
+- **Maximum Data Points**: By retrieving and logging data within the node itself, we are not limited by the Cosmos SDK's native chain endpoints. This allows us to index and store data that is not accessible through the REST or RPC API. As a result, we can display proprietary data points that are not available to other explorers.

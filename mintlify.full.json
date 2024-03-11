@@ -52,6 +52,10 @@
     {
       "name": "Celatone",
       "url": "celatone"
+    },
+    {
+      "name": "Aldus",
+      "url": "aldus"
     }
   ],
   "navigation": [
@@ -103,6 +107,43 @@
     {
       "group": "Resources",
       "pages": ["celatone/changelog", "celatone/faq"]
+    },
+    {
+      "group": "Getting Started",
+      "pages": ["aldus/introduction", "aldus/overview"]
+    },
+    {
+      "group": "REST API",
+      "pages": [
+        "aldus/api-reference/overview",
+        {
+          "group": "Core",
+          "icon": "link",
+          "pages": [
+            "aldus/api-reference/v1accounts/get-all-accounts",
+            "aldus/api-reference/v1accounts/get-account-by-address",
+            "aldus/api-reference/v1assets/get-assets"
+          ]
+        },
+        {
+          "group": "CosmWasm",
+          "icon": "c",
+          "pages": [
+            "aldus/api-reference/v1codes/get-all-codes",
+            "aldus/api-reference/v1codes/get-code-by-id",
+            "aldus/api-reference/v1contracts/get-all-contracts",
+            "aldus/api-reference/v1contracts/get-contract-by-address"
+          ]
+        },
+        {
+          "group": "MoveVM",
+          "icon": "m",
+          "pages": [
+            "aldus/api-reference/v1modules/get-all-modules",
+            "aldus/api-reference/v1modules/get-module-by-address-and-name"
+          ]
+        }
+      ]
     }
   ],
   "footerSocials": {

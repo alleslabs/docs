@@ -1,0 +1,10 @@
+---
+title: Celatone API
+---
+
+The Celatone API acts as the main aggregation layer for all of Celatone's data sources. It is designed to be a single source of truth for all of Celatone's data, and to provide a single, consistent interface for accessing that data.
+
+The API allows us to isolate the complexity of integrating with multiple data sources and managing configurations from the frontend into the API. This has several benefits:
+
+- **Simple Integration**: Having one endpoint for all required explorer data allows us to greatly simplify the frontend integration process. Instead of having to integrate with multiple APIs, the frontend only needs to integrate with one. This greatly reduces the complexity of the frontend codebase and makes it much more maintainable.
+- **Highly Configurable**. As we begin to implement and more widely support the lite version of Celatone, we will need to be able to use different data sources for different explorer instances. The API allows us to easily manage these configurations and provide a consistent interface for the frontend to access the data.
