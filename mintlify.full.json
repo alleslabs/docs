@@ -72,6 +72,22 @@
       "pages": ["celatone/introduction", "celatone/quickstart", "celatone/supported-networks"]
     },
     {
+      "group": "For Users",
+      "pages": [
+        {
+          "group": "Local Deployment",
+          "icon": "map-pin",
+          "pages": [
+            "celatone/local-deployment/introduction",
+            "celatone/local-deployment/dependencies",
+            "celatone/local-deployment/indexer",
+            "celatone/local-deployment/frontend",
+            "celatone/local-deployment/customization"
+          ]
+        }
+      ]
+    },
+    {
       "group": "Architecture",
       "pages": [
         "celatone/architecture/overview",

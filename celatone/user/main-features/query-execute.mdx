@@ -1,0 +1,78 @@
+---
+title: Query / Execute Contract
+icon: file-magnifying-glass
+---
+
+## Query
+
+### What is Query?
+
+Querying Contract in CosmWasm refers to the process of retrieving information from a smart contract without altering its state.
+
+### Query Messages
+
+In Celatone, we provide the set of available messages for each selected contract.
+
+#### How to Query with JSON Input
+
+1. Click on “**Query**” in the Developer Tools of the sidebar
+1. Click on “**Select Contract**” button
+1. You can fill in the contract address manually or selecting the contract you’ve instantiated or saved to the list before
+1. Available Query messages will display, you can either click on any messages and input their key and value, or input the entire query parameters in JSON input manually.
+1. Submit the query by click “**Query**” button or press `Cmd + Enter` (or `Ctrl + Enter` for Windows) to receive the response in the “**Return Output**”.
+
+If the input is an invalid JSON input, the system will display input error. But in case of invalid parameters, the error will display after the query attempt in the Return Output.
+
+#### How to Query with JSON Schema
+
+While we provide the available messages, technical limitations prevent us from retrieving specific keys and expected values for each input. This issue can be addressed with a **JSON schema** for the Code from which the contract is instantiated. By attaching the schema to the Code, you'll be able to identify labeled fields and understand the required input types.
+
+1. After select the contract, change the tab from “**JSON Input**” to “**Your Schema**”
+1. If you **haven’t attached** the JSON Schema, click the “**Attach**” button
+1. You can attach the schema in 3 ways which are attaching the file, provide the URL, and fill the schema manually.
+1. If the schema is attached correctly. Each available query messages will display in accordion. You can expand any messages to query with available input fields. For the query message that does not require any parameters, the return output will display automatically.
+1. Submit and wait for the response.
+
+You also can copy the query message by clicking “**Copy QueryMsg**” after provide the input to use them later or use in the JSON Input tab.
+
+See more in JSON Schema
+
+---
+
+## Execute
+
+### What is Execute?
+
+Executing a contract involves sending a transaction, which require connected wallet and transaction fee, that alters the contract's state.
+
+### Execute Messages
+
+ExecuteMsg is a command sent to a contract to perform actions, each contract having its own set of executable messages. In Celatone, we provide the available messages for each selected contract.
+
+#### How to Execute with JSON Input
+
+1. **Connect your wallet** to Celatone, by clicking the **“Connect”** button at the top-right of the screen
+1. Click on “**Execute**” in the Developer Tools of the sidebar
+1. Click on “**Select Contract**” button
+1. You can fill in the **contract address manually** or selecting the contract you’ve **instantiated or saved to the list** before
+1. Available Execute messages will display, you can either click on any messages and input their key and value, or input the entire Execute parameters in JSON input manually.
+1. Submit the transaction by click “**Execute**” button or press `Cmd + Enter` (or `Ctrl + Enter` for Windows)
+1. If the transaction is submitted properly. The modal display the assigned transaction hash with execution details. Otherwise, the error log will display or the transaction will end in failed status.
+
+#### How to Execute with JSON Schema
+
+1. After select the contract, change the tab from “**JSON Input**” to “**Your Schema**”
+1. If you haven’t attached the JSON Schema, click the “**Attach**” button
+1. You can attach the schema in 3 ways which are attaching the file, provide the URL, and fill the schema manually.
+1. If the schema is attached correctly. Each available **execute messages will display in accordion.** You can expand any messages to execute with available input fields.
+1. Submit the transaction by click “**Execute**” button or press `Cmd + Enter` (or `Ctrl + Enter` for Windows)
+1. If the transaction is submitted properly. The modal display the assigned transaction hash with execution details. Otherwise, the error log will display or the transaction will end in failed status.
+
+See more in JSON Schema
+
+#### Attach Funds with Execute Messages
+
+1. Before submit the transaction, you can specify any funds you wish to attach through **Attach Funds** section, which you can provide in two options
+1. Submit the transaction by click “**Execute**” button or press `Cmd + Enter` (or `Ctrl + Enter` for Windows)
+1. If the transaction is submitted properly. The modal display the assigned transaction hash with execution details. Otherwise, the error log will display or the transaction will end in failed status.
+1. You can view the contract through the Contract Details to see if the contract successfully received the attach funds.

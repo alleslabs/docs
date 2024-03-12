@@ -57,15 +57,53 @@
   "navigation": [
     {
       "group": "Welcome",
-      "pages": ["home/introduction"]
+      "pages": [
+        "home/introduction"
+      ]
     },
     {
       "group": "Getting Started",
-      "pages": ["home/overview"]
+      "pages": [
+        "home/overview"
+      ]
     },
     {
       "group": "Getting Started",
-      "pages": ["celatone/introduction", "celatone/quickstart", "celatone/supported-networks"]
+      "pages": [
+        "celatone/introduction",
+        "celatone/quickstart",
+        "celatone/supported-networks"
+      ]
+    },
+    {
+      "group": "For Users",
+      "pages": [
+        "celatone/user/introduction",
+        "celatone/user/main-features/block-explorer",
+        "celatone/user/main-features/deploy-contract",
+        "celatone/user/main-features/query-execute",
+        "celatone/user/main-features/organize-account",
+        {
+          "group": "Code",
+          "icon": "code",
+          "pages": [
+            "celatone/user/code/organize",
+            "celatone/user/code/code-details",
+            "celatone/user/code/attach-json-schema"
+          ]
+        },
+        {
+          "group": "Contract",
+          "icon": "file-code",
+          "pages": [
+            "celatone/user/contract/organize",
+            "celatone/user/contract/instantiate",
+            "celatone/user/contract/contract-details",
+            "celatone/user/contract/admin-actions",
+            "celatone/user/contract/instantiated-contracts"
+          ]
+        }
+      ]
     },
     {
       "group": "Architecture",
@@ -102,7 +140,10 @@
     },
     {
       "group": "Resources",
-      "pages": ["celatone/changelog", "celatone/faq"]
+      "pages": [
+        "celatone/changelog",
+        "celatone/faq"
+      ]
     }
   ],
   "footerSocials": {
@@ -115,5 +156,7 @@
     "suggestEdit": true,
     "thumbsRating": true
   },
-  "openapi": ["/openapi.json"]
+  "openapi": [
+    "/openapi.json"
+  ]
 }
