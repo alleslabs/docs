@@ -82,13 +82,12 @@
         "celatone/user/main-features/block-explorer",
         "celatone/user/main-features/deploy-contract",
         "celatone/user/main-features/query-execute",
-        "celatone/user/main-features/organize-account",
         {
           "group": "Code",
           "icon": "code",
           "pages": [
             "celatone/user/code/organize",
-            "celatone/user/code/code-details",
+            "celatone/user/code/detail-page",
             "celatone/user/code/attach-json-schema"
           ]
         },
@@ -98,13 +97,52 @@
           "pages": [
             "celatone/user/contract/organize",
             "celatone/user/contract/instantiate",
-            "celatone/user/contract/contract-details",
+            "celatone/user/contract/detail-page",
             "celatone/user/contract/admin-actions",
             "celatone/user/contract/instantiated-contracts"
+          ]
+        },
+        {
+          "group": "Transaction",
+          "icon": "files",
+          "pages": [
+            "celatone/user/transaction/past-txs",
+            "celatone/user/transaction/detail-page"
+          ]
+        },
+        {
+          "group": "Block",
+          "icon": "cube",
+          "pages": [
+            "celatone/user/block/detail-page"
+          ]
+        },
+        {
+          "group": "Account",
+          "icon": "user",
+          "pages": [
+            "celatone/user/account/organize",
+            "celatone/user/account/detail-page"
+          ]
+        },
+        {
+          "group": "Proposal",
+          "icon": "box-ballot",
+          "pages": [
+            "celatone/user/proposal/detail-page"
+          ]
+        },
+        {
+          "group": "Osmosis Pools",
+          "icon": "chart-pie",
+          "pages": [
+            "celatone/user/osmosis/pool-list",
+            "celatone/user/osmosis/pool-detail"
           ]
         }
       ]
     },
+    
     {
       "group": "Architecture",
       "pages": [
