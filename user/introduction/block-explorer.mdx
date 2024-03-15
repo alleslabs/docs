@@ -3,17 +3,23 @@ title: Use Celatone as Block Explorer
 icon: radar
 ---
 
-To fulfill the full-loop use cases for any CosmWasm ecosystem smart contract developers and every users, We provide two basic page types to let everyone explore the selecting network with ease which are navigation page and details page.
-
-In this document, we will explore about the navigation pages and you can see further information about each page details through the link provided in each section
-
 <Frame>
   <img src="/images/user-docs/block-explorer.jpg" />
 </Frame>
 
-### Overview Page
+To fulfill the full-loop use cases for any CosmWasm ecosystem smart contract developers and every users, We provide two basic page types to let everyone explore the selecting network with ease which are navigation page and details page.
+
+In this document, we will explore about the navigation pages and you can see further information about each page details through the link provided in each section
+
+---
+
+## Overview Page
 
 Celatone Overview page is used as a home page for our webapp. It provides network health information and key use cases for deploy or interact with the contract. Recent activity sections display the most recent transactions and proposed blocks.
+
+<Frame>
+  <img src="/images/user-docs/overview.jpg" />
+</Frame>
 
 Key information about the network health we provided are:
 
@@ -25,32 +31,45 @@ Key information about the network health we provided are:
 
 You can explore about the 3 main actions for smart contract developer which are Deploy, Query, and Execute through the links.
 
-This page also displays the 10 recent transactions and blocks. You can view the full navigation of transactions and block on this network by clicking the View More button of each section, which will send you to the **Recent Transactions** and **Recent Blocks** page.
+This page also displays the 10 recent transactions and blocks. You can view the full navigation of transactions and block on this network by clicking the View More button of each section, which will send you to the [**Recent Transactions**](#recent-transactions) and [**Recent Blocks**](#recent-blocks) page.
 
 ---
 
-### Search Bar
+## Search Bar
 
 The search bar at the top of the screen can accept inputs like Account Address, Contract Address, Transaction Hash, Block Height, Code ID, and Pool ID (for the Osmosis Network).
 
 Keep in mind that if you input numbers, the system will show available options such as Code, Block, or Pool to view.
 
+<Frame>
+  <img src="/images/user-docs/search.jpg" />
+</Frame>
+
 ---
 
-### Recent Transactions
+## Recent Transactions
+
+<Frame>
+  <img src="/images/user-docs/pages/recent-txs.jpg" />
+</Frame>
 
 **Recent Transaction** page which allows you to see the total transactions in the network and you can dig deeper to oldest transaction through the pagination.
 
 Each transaction row display these information
 
-- **Transaction Hash:** The hash is generated to reference the transaction. Clicking on the transaction hash will send you to Transaction details Page. If the transaction was sent with multiple messages, the number of messages will be displayed alongside the hash.
+- **Transaction Hash:** The hash is generated to reference the transaction. Clicking on the transaction hash will send you to Transaction details page. If the transaction was sent with multiple messages, the number of messages will be displayed alongside the hash.
 - **Messages:** Messages that were sent through the transaction. There are supporting messages that will be display in formatted such as store code, instantiate contract, migrate contract, send assets, etc. Otherwise, it will be displayed in generic format.
 - **Transaction Sender:** The address of the transaction sender is usually a wallet account or a contract. Clicking on the sender's address will link to either the **Account Details** or **Contract Details page**, depending on the type of sender.
 - **Timestamp:** The time the transaction was sent, displayed in UTC timezone.
+- Clicking on any entry will send you to [Transaction details page](https://docs.alleslabs.com/user/general/transaction/detail-page)
 
 ---
 
-### Recent Blocks
+## Recent Blocks
+
+<Frame>
+  <img src="/images/user-docs/pages/recent-blocks.jpg" />
+</Frame>
 
 **Recent Blocks** page enables you to view the total proposed blocks in the network. You can explore older blocks via pagination.
 
@@ -61,13 +80,17 @@ Each transaction row display these information
 - **Proposed by:** The validator that proposed the block. Clicking the validator name will send you to the validator details.
 - **Transactions:** The number of transactions sent within this block.
 - **Timestamp:** The time the block was proposed, displayed in UTC timezone.
-- Clicking on any entry will send you to Block details Page
+- Clicking on any entry will send you to [Block details page](https://docs.alleslabs.com/user/general/block/detail-page)
 
 ---
 
-### Recent Codes
+## Recent Codes
 
-Displays the latest smart contracts codes deployed on the network. You can filter the codes by the instantiated permission. See more about instantiated permission in **Code Details.**
+<Frame>
+  <img src="/images/user-docs/pages/recent-codes.jpg" />
+</Frame>
+
+Displays the latest smart contracts codes deployed on the network. You can filter the codes by the instantiated permission. See more about instantiated permission in [**Code Information Section.**](https://docs.alleslabs.com/user/cosmwasm/code/detail-page#code-information-section)
 
 Each entry includes:
 
@@ -76,13 +99,17 @@ Each entry includes:
 - **CW2 Info:** Displays compliance information with the CW2 specification, indicating if the code adheres to standard contract versioning practices. This helps in identifying the version and capabilities of the smart contract code. CW2 Info will be properly displayed if the code has been used to instantiated a contract.
 - **Contracts:** The number of contracts that instantiated from this code.
 - **Uploader:** Address of the entity who stored the code. Can be a wallet address or a contract.
-- **Instantiate Permission:** The information that indicates who can instantiate the contract from this code. Hovering the chip will provide the brief explanation about each permission. See more about instantiated permission in **Code Details.**
+- **Instantiate Permission:** The information that indicates who can instantiate the contract from this code. Hovering the chip will provide the brief explanation about each permission.
 - Action Buttons
-- Clicking on any entry will send you to Code details Page
+- Clicking on any entry will send you to [Code details page](https://docs.alleslabs.com/user/cosmwasm/code/detail-page)
 
 ---
 
-### Recent Contracts
+## Recent Contracts
+
+<Frame>
+  <img src="/images/user-docs/pages/recent-contracts.jpg" />
+</Frame>
 
 Showcases the most recent contracts created. Details for each include:
 
@@ -90,12 +117,16 @@ Showcases the most recent contracts created. Details for each include:
 - **Contract Name:** You can name the code to help you remember what this contract is. You also can input the contract description as a brief information about how it works.
 - **Instantiator:** Entity that instantiated the contract. Can be a wallet address or a contract, you can see the details of the instantiator by clicking on the address.
 - **Timestamp:** Timestamp of contract creation, in UTC.
-- **Save Contract** (Button): \*\*\*\*Save this contract to "Saved Contract" or other Contract List for easy access when you need to use it later. See Save Contract.
-- Clicking on any entry will send you to **Contract details** Page
+- **Save Contract** (Button): Save this contract to "Saved Contract" or other Contract List for easy access when you need to use it later. See [Save Contracts](https://docs.alleslabs.com/user/cosmwasm/contract/organize#saving-contract-for-later-use)
+- Clicking on any entry will send you to [**Contract details** Page](https://docs.alleslabs.com/user/cosmwasm/contract/detail-page)
 
 ---
 
-### Recent Proposals
+## Recent Proposals
+
+<Frame>
+  <img src="/images/user-docs/pages/recent-proposals.jpg" />
+</Frame>
 
 Lists the latest governance proposals. You can search with Proposal ID or Proposal Title and filter them by the proposal status and types. Each proposal entry contains:
 
@@ -104,10 +135,12 @@ Lists the latest governance proposals. You can search with Proposal ID or Propos
 - **Status:** Current state of the proposal.
 - **Voting ends:** Show the date and time when the proposal will conclude or has concluded.
 - **Resolved Block Height:** Display the block height at which the proposal was resolved (Passed, Rejected, or Failed) within the network.
+- Clicking on any entry will send you to [Proposal details page](https://docs.alleslabs.com/user/general/proposal/detail-page)
+
 
 ---
 
-### Recent Validators (Coming Soon)
+## Recent Validators (Coming Soon)
 
 The "Recent Validators" feature is currently under development and will be available soon. This feature will provide valuable information about the network validators.
 
@@ -119,7 +152,11 @@ The "Recent Validators" feature is currently under development and will be avail
 
 ---
 
-### Osmosis Pools
+## Osmosis Pools
+
+<Frame>
+  <img src="/images/user-docs/pages/osmosis-pool.jpg" />
+</Frame>
 
 Presents the list of liquidity pools in the Osmosis network. Each pool might show:
 
@@ -127,18 +164,19 @@ Presents the list of liquidity pools in the Osmosis network. Each pool might sho
 - **Pool Type:** The behavior of a pool varies depending on its type. If the pool is Superfluid enabled, the term "Superfluid" will be displayed next to the type.
 - **Pool Assets:**
 - **Liquidity:** Total value locked in the pool.
-- **Asset Allocation:**
+- **Asset Allocation**
+- Clicking on any entry will send you to [Pool details page](https://docs.alleslabs.com/user/cosmwasm/osmosis/pool-detail)
 
-**Search or Filter:**
+### Search or Filter
 
 - You can search the pool with Pool ID, Token Symbol, or Token ID.
 - You also can filter the pool by pool type and show only Superfluid pool.
 
-**Sorting Pool:**
+### Sorting Pool
 
 Pools can be sorted by Pool ID only with ascending or descending order.
 
-**Asset Allocation View:**
+### Asset Allocation View
 
 You can switch the view of asset allocation for the pools with supported token pools in two ways.
 
