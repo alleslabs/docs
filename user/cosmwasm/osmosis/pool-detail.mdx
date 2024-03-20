@@ -1,0 +1,37 @@
+---
+title: Pool Details
+icon: file-lines
+---
+
+## Overview
+
+<Frame>
+    <img src="/images/user-docs/pages/pool-detail.jpg" />
+</Frame>
+
+
+Celatone offers users a comprehensive view of individual liquidity pools within the Osmosis ecosystem. This section displays crucial information about the pool, including:
+
+- **Pool ID and Creation Details**: The unique identifier for the pool and its creation timestamp.
+- **Assets Provided**: A list of assets contributed to the pool, their weights, and allocation percentages, which indicate the pool's composition and the relative share of each asset.
+- **Swap Fees**: The fee charged for making a swap in a pool, defined by the pool
+  creator, and paid by traders in the form of a percentage the input swap asset amount.
+- **Exit Fees and Governance**: The fee charged when withdrawing from a pool, defined by the pool
+  creator, and paid by the withdrawer in the form of LP tokens.
+- **Liquidity Information**: Current total liquidity in the pool.
+
+<Warning>
+Remark: The full information visualization for Concentrated Liquidity Pool and CosmWasm pool are under construction.
+</Warning>
+
+---
+
+## Transactions
+
+The transactions related to the pool are organized into several tabs, each representing a different type of activity:
+
+- **Swap**: Transactions where pool assets are exchanged by users, affecting the pool's composition and price of its assets.
+- **LP:** Transactions related to providing or removing liquidity from the pool, displaying the assets provided and receiving GAMM tokens, or the reverse process.
+- **Bonding**: Actions related to the bonding or unbonding of GAMM token.
+- **Superfluid**: Displays transactions specific to Superfluid Staking, where liquidity provision is paired with staking, enhancing the pool's and the network's security. This tab can be seen in the pool with Superfluid Staking enabled only. [Read more about Superfluid Staking](https://docs.osmosis.zone/osmosis-core/modules/superfluid/)
+- **Migrate**: Includes instances where liquidity is moved from one pool to another.

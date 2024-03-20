@@ -1,0 +1,67 @@
+---
+title: Admin Actions
+icon: user-gear
+description: Guide for Migrate Contracts, Update and Clear Admin
+---
+
+## Migrating a Contract
+
+Celatone allows you to migrate a smart contract to a different codebase. This can be done to update the contract to a new version with enhanced features or to address any issues with the current version.
+
+<Frame>
+    <img src="/images/user-docs/contracts/migrate.jpg" />
+</Frame>
+
+### Navigation Path to Migrate
+
+Your connected wallet must have an admin access for the contract to migrate it. To navigate to the migration feature:
+
+1. **Migrate Page**: Access "Migrate" in the sidebar, select "Select Contract", and a drawer shows contracts you can administer.
+1. **Contract Details**: Within the details page of a contract you administer, use the enabled "Admin" button at the top-right to find "Migrate Contract".
+1. **Contract List**: In lists like "Instantiated by me" or "Saved Contracts", contracts you can administer will have an active "Migrate" option.
+
+### Steps for Migration
+
+1. **Selecting the Contract**: Choose the contract you wish to migrate.
+1. **Migration Options**:
+1. **Migrate Message**: Provide the necessary parameters for migration. You can input the data in JSON format or use your attached JSON schema for a guided input.
+1. **Confirm Migration**: After ensuring the information is correct, you can proceed to migrate your contract by confirming the transaction.
+
+<Note>
+Remark: Always ensure to review the implications of migrating a contract as it may affect the contract's state and functionality.
+</Note>
+
+---
+
+## Update new Admin to the contract
+
+If your connected wallet has an admin access to the contract, you can assign other address to become the contract admin instead of yourself.
+
+<Frame>
+    <img src="/images/user-docs/contracts/update-admin.jpg" />
+</Frame>
+
+### Navigation Path to Update Admin
+
+Your connected wallet must have an admin access for the contract to assign another address as the contract’s admin. To navigate to the update admin feature:
+
+1. **Contract Details**: On the contract's details page, click the "Admin" button to access "Update Admin".
+1. **Contract List**: In your lists, such as "Instantiated by me" or "Saved Contracts", contracts where you have Admin Access will show an "Update Admin" option.
+
+### Steps for Update Admin
+
+1. **Selecting the Contract**: Select the contract to update the admin for.
+1. **Input new admin address:** Enter the address that will receive Admin Access. This will remove your admin access in favor of the new admin.
+1. **Confirm Update**: Review the details, then confirm the transaction to finalize the admin change.
+
+---
+
+## Clear Admin Access
+
+You can also clear yourself out of admin access from the contract
+
+In similar manner with “Update Admin”, you can select “Clear Admin” instead to remove yourself from being a contract’s admin.
+
+<Frame>
+    <img src="/images/user-docs/contracts/clear-admin.jpg" />
+</Frame>

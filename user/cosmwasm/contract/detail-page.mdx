@@ -1,0 +1,108 @@
+---
+title: Contract Details
+icon: file-lines
+---
+
+The "Contract Details" page in Celatone provides comprehensive information about a specific smart contract. It includes:
+
+- **Contract Name and Address**: The top of the page lists the contract's name and blockchain address. You can click at the address to copy.
+- **Label**: A user-defined label for easy identification, which can be set during contract instantiation.
+- **Contract Asset Value:** Display the contract’s currently holding asset value
+
+---
+
+## Overview
+
+<Frame>
+    <img src="/images/user-docs/contracts/contract-overview.jpg" />
+</Frame>
+
+This section may contain a description, asset holdings, and delegation details.
+
+- **Contract Description:** You can add the contract description to help you remember what contract does and how it works. If the contract is listed on the public projects, the description will be provided.
+- **Assets:** Display the contract’s currently holding assets, separated in supporting assets and unsupported assets. More information on [“Assets” section](#assets)
+- **Command Shortcuts**: Quick access to execute common queries or transactions related to the contract. Select any shortcut will send you to Query/Execute page.
+- **Contract Information**: Detailed info such as the originating code, CW2 compliance info, admin address, and block height at instantiation.
+- **Transactions & Histories**: A log of all transactions involving the contract, including migrations and related proposals. More information on [“Transaction & Histories” section](#transactions-and-histories)
+
+Each section is designed to provide users with full visibility and control over their contract, ensuring a streamlined experience on the Celatone platform.
+
+---
+
+## Assets
+
+<Frame>
+    <img src="/images/user-docs/contracts/contract-assets.jpg" />
+</Frame>
+
+The "Asset" section of the Account Details page on Celatone provides a detailed overview of the assets associated with a specific smart contract. This section is divided into:
+
+- **Supported Assets**: Lists all the tokens and assets that are recognized and supported by the contract. Each asset displays its balance and, if available, its equivalent value in a common currency.
+- **Unsupported Assets**: Shows any tokens or assets that are held by the contract but are not officially supported or recognized. These may include less common tokens or those specific to certain functions within the contract such as Factory Token, LP Token, IBC Token, Gamm Token, etc..
+
+For further details and specific functionalities, you would need to refer to the documentation or user interface of the specific blockchain or protocol you're using.
+
+---
+
+## Delegations
+
+<Frame>
+    <img src="/images/user-docs/contracts/contract-delegations.jpg" />
+</Frame>
+
+The "Delegation" section of a contract's details on the Celatone platform provides insights into the staking aspects of the contract. This section covers:
+
+- **Total Bonded**: The aggregate amount of tokens staked with the validators.
+- **Rewards**: Displays the total rewards accrued from staking activities.
+
+Users can select to see currently delegated assets or unbonding assets.
+
+- **Delegated**: Lists the individual validators to whom tokens are staked, the amount staked, and any rewards from each validator.
+- **Unbonding**: Shows any tokens in the process of unbonding, the amount being unbonded, and the completion date for each unbonding action.
+
+If the contract has any ongoing redelegation processes, users can view these activities by clicking the "See Active Redelegations" button, which becomes clickable when redelegations are present.
+
+---
+
+## Transactions & Histories
+
+<Frame>
+    <img src="/images/user-docs/contracts/contract-txs.jpg" />
+</Frame>
+
+### Transactions
+
+The "Transactions" details all the transactions **related** to the contract. Users can view:
+
+- **Transaction Hash**: Unique identifiers for each transaction.
+- **Messages**: Descriptions of the transaction purpose, such as contract instantiation, contract updates, or executions.
+- **Sender**: The wallet or contract address that initiated the transaction.
+- **Timestamp**: Exact date and time when the transaction was confirmed on the blockchain.
+
+### Migrations
+
+Migration refers to the process of moving a contract instance from one codebase to another, users can track:
+
+- **Code ID Changes**: Reflects migration from one code ID to another, signifying contract upgrades.
+- **Migration Initiators**: Shows the wallet addresses that performed the migration.
+- **Block Height**: The blockchain height at which the migration transaction took place.
+
+### Related Proposals
+
+If the contract was initiated by a proposal, has undergone updates via governance, or is referenced in any proposals, such related proposals will be listed in this section.
+
+---
+
+## Contract States
+
+<Frame>
+    <img src="/images/user-docs/contracts/contract-states.jpg" />
+</Frame>
+
+The "Contract States" section on Celatone provides a detailed view of the contract's current state, which includes:
+
+- **Loaded States**: Celatone displays the 100 most recent states of a contract by default. If not all states are visible after this initial load, users can select the "Load more" option to retrieve additional sets of 100 states until the full state data of the contract is accessible on the platform.
+- **Namespace:** Categorization of states according to the defined namespaces. Users also have options to view **'All Contract States' and 'Others'** for organized viewing.
+- **State Entries**: Each entry represents a specific state variable of the contract and showing their current values.
+- **Search Bar**: Users can search for specific state entries by their **keys** for quick access.
+- **Download States**: An option to download the current state information, which can be useful for offline analysis or backup.

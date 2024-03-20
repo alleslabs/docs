@@ -12,7 +12,7 @@
     "dark": "#4083D8",
     "background": {
       "light": "#FBFCFD",
-      "dark": "#030616"
+      "dark": "#0E131C"
     }
   },
   "modeToggle": {
@@ -70,6 +70,22 @@
     {
       "group": "Getting Started",
       "pages": ["celatone/introduction", "celatone/quickstart", "celatone/supported-networks"]
+    },
+    {
+      "group": "For Users",
+      "pages": [
+        {
+          "group": "Local Deployment",
+          "icon": "map-pin",
+          "pages": [
+            "celatone/local-deployment/introduction",
+            "celatone/local-deployment/dependencies",
+            "celatone/local-deployment/indexer",
+            "celatone/local-deployment/frontend",
+            "celatone/local-deployment/customization"
+          ]
+        }
+      ]
     },
     {
       "group": "Architecture",

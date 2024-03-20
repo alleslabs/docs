@@ -12,7 +12,7 @@
     "dark": "#4083D8",
     "background": {
       "light": "#FBFCFD",
-      "dark": "#030616"
+      "dark": "#0E131C"
     }
   },
   "modeToggle": {
@@ -50,36 +50,157 @@
   },
   "tabs": [
     {
-      "name": "Celatone",
-      "url": "celatone"
+      "name": "Celatone for Users",
+      "url": "user"
+    },
+    {
+      "name": "Celatone for Developers",
+      "url": "development"
     }
   ],
   "navigation": [
     {
       "group": "Welcome",
-      "pages": ["home/introduction"]
+      "pages": [
+        "home/introduction"
+      ]
     },
     {
       "group": "Getting Started",
-      "pages": ["home/overview"]
+      "pages": [
+        "home/overview"
+      ]
+    },
+    {
+      "group": "Introduction",
+      "pages": [
+        "user/introduction/user-introduction",
+        "user/introduction/block-explorer"
+      ]
+    },
+    {
+      "group": "General",
+      "pages": [
+        {
+          "group": "Transaction",
+          "icon": "files",
+          "pages": [
+            "user/general/transaction/past-txs",
+            "user/general/transaction/detail-page"
+          ]
+        },
+        {
+          "group": "Block",
+          "icon": "cube",
+          "pages": [
+            "user/general/block/detail-page"
+          ]
+        },
+        {
+          "group": "Proposal",
+          "icon": "box-ballot",
+          "pages": [
+            "user/general/proposal/detail-page"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "CosmWasm",
+      "pages": [
+        "user/cosmwasm/deploy-contract",
+        "user/cosmwasm/query-execute",
+        {
+          "group": "Code",
+          "icon": "code",
+          "pages": [
+            "user/cosmwasm/code/organize",
+            "user/cosmwasm/code/detail-page",
+            "user/cosmwasm/code/attach-json-schema"
+          ]
+        },
+        {
+          "group": "Contract",
+          "icon": "file-code",
+          "pages": [
+            "user/cosmwasm/contract/organize",
+            "user/cosmwasm/contract/instantiate",
+            "user/cosmwasm/contract/detail-page",
+            "user/cosmwasm/contract/admin-actions",
+            "user/cosmwasm/contract/instantiated-contracts"
+          ]
+        },
+        {
+          "group": "Account (CosmWasm)",
+          "icon": "user",
+          "pages": [
+            "user/cosmwasm/account/organize",
+            "user/cosmwasm/account/detail-page"
+          ]
+        },
+        {
+          "group": "Osmosis Pools",
+          "icon": "chart-pie",
+          "pages": [
+            "user/cosmwasm/osmosis/pool-list",
+            "user/cosmwasm/osmosis/pool-detail"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "MOVE (Initia Scan)",
+      "pages": [
+        "user/move/publish-module",
+        "user/move/view-execute",
+        {
+          "group": "Module",
+          "icon": "code",
+          "pages": [
+            "user/move/module/organize",
+            "user/move/module/detail-page"
+          ]
+        },
+        {
+          "group": "Account (Move)",
+          "icon": "user",
+          "pages": [
+            "user/move/account/organize",
+            "user/move/account/detail-page"
+          ]
+        },
+        {
+          "group": "NFTs",
+          "icon": "hexagon-vertical-nft",
+          "pages": [
+            "user/move/nft/collection",
+            "user/move/nft/detail-page",
+            "user/move/nft/nft-account"
+          ]
+        }
+      ]
     },
     {
       "group": "Getting Started",
-      "pages": ["celatone/introduction", "celatone/quickstart", "celatone/supported-networks"]
+      "pages": [
+        "development/introduction",
+        "development/quickstart",
+        "development/supported-networks"
+      ]
     },
     {
       "group": "Architecture",
       "pages": [
-        "celatone/architecture/overview",
+        "development/architecture/overview",
         {
           "group": "Components",
           "icon": "puzzle",
           "pages": [
-            "celatone/architecture/components/indexer",
-            "celatone/architecture/components/aldus-api",
-            "celatone/architecture/components/price-cacher",
-            "celatone/architecture/components/celatone-api",
-            "celatone/architecture/components/frontend"
+            "development/architecture/components/indexer",
+            "development/architecture/components/aldus-api",
+            "development/architecture/components/price-cacher",
+            "development/architecture/components/celatone-api",
+            "development/architecture/components/frontend"
           ]
         }
       ]
@@ -91,18 +212,21 @@
           "group": "Local Deployment",
           "icon": "map-pin",
           "pages": [
-            "celatone/local-deployment/introduction",
-            "celatone/local-deployment/dependencies",
-            "celatone/local-deployment/indexer",
-            "celatone/local-deployment/frontend",
-            "celatone/local-deployment/customization"
+            "development/local-deployment/introduction",
+            "development/local-deployment/dependencies",
+            "development/local-deployment/indexer",
+            "development/local-deployment/frontend",
+            "development/local-deployment/customization"
           ]
         }
       ]
     },
     {
       "group": "Resources",
-      "pages": ["celatone/changelog", "celatone/faq"]
+      "pages": [
+        "development/changelog",
+        "development/faq"
+      ]
     }
   ],
   "footerSocials": {
@@ -115,5 +239,7 @@
     "suggestEdit": true,
     "thumbsRating": true
   },
-  "openapi": ["/openapi.json"]
+  "openapi": [
+    "/openapi.json"
+  ]
 }

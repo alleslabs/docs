@@ -1,0 +1,37 @@
+---
+title: Transaction Details
+icon: file-lines
+---
+
+## Overview
+
+In the Cosmos-based ecosystem, a transaction refers to a message that triggers a state change on the blockchain. These transactions can include transfers of the native cryptocurrency between accounts, staking operations, governance proposals, or interactions with smart contracts.
+
+Each transaction is composed of one or more messages and requires a fee, paid in the native cryptocurrency, to be processed by validators.
+
+Transactions are atomic; they either fully succeed or fail without affecting the blockchain state. Once validators confirm a transaction, it is irrevocably recorded on the blockchain.
+
+<Frame>
+  <img src="/images/user-docs/pages/txs-detail.jpg" />
+</Frame>
+
+The **Transaction Details** page on Celatone gives an in-depth look at specific blockchain transactions. It includes:
+
+### Title Section
+
+- **Transaction Hash**: A unique identifier for the transaction.
+- **Success Indicator**: Shows whether the transaction was successful.
+
+### Transaction Information
+
+- **Network Information**: Specifies the network on which the transaction occurred.
+- **Block Height**: Indicates the blockchain height at which the transaction was recorded.
+- **Transaction Fee**: The cost of the transaction, paid in the network's cryptocurrency.
+- **Gas Details**: The amount of computational effort used and the maximum amount that could have been used for the transaction.
+
+### Messages & Event Logs
+
+- **Messages**: Details about the actions performed in the transaction, such as uploading Wasm or altering contract states.
+- **Event Logs**: Additional information about events triggered by the transaction.
+
+For a full understanding of the transaction, users can view the transaction in JSON format available on the page by click on “View in JSON” button.
