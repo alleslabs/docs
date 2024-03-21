@@ -23,7 +23,6 @@
 *.js
 
 # Ignore images
-*.jpg
 *.jpeg
 *.gif
 
