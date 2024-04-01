@@ -1,0 +1,77 @@
+---
+title: NFTs Collection Details
+icon: file-lines
+---
+
+The **“NFT Collection Details”** page in Celatone provides comprehensive information about a specific NFT Collection. It includes:
+- **Collection Name, Address and Type**: The top of the page lists the collection name and type of collection. It also includes blockchain address which you can click to view as account address.
+- **Resource**: Display the button that allow user to view the collection as a resource. Read more about Resource at [Resource section in Account Detail Page](https://docs.alleslabs.com/user-guide/move/account/detail-page#resources)
+
+<Frame>
+    <img src="/images/user-docs/move/nft/nft-collection-detail.jpg" />
+</Frame>
+
+---
+
+## Overview
+
+This section contain an information about supply information, NFTs holdings, and collection information.
+
+<Frame>
+    <img src="/images/user-docs/move/nft/collection-overview.jpg" />
+</Frame>
+
+- **Supply Information**: Users can see amount of `Current Supply` , `Total Minted` , `Total Burned` and `Max Supply` of the collection
+- **NFTs holdings**: Display the collection's currently holding NFTs, with the badge that represent amount of all NFTs in the collection. More information on ”**NFTs in this collection”**
+- **Collection Information**
+    - **Created Block Height:** Indicates the blockchain height at which the collection was first created.
+    - **Created by:** Shows the account address of the creator of the collection.
+    - Depending on the collection's creation context, one of the following will be displayed:
+        - **Created From:** For collection originating from the genesis block, this will be displayed as “Created From Genesis.”
+        - **Initial Published Transaction:** For collection created post-genesis through normal processes, it will show the transaction details.
+        - **Initial Published Proposal ID:** For collection initiated through a proposal, this will the corresponding proposal ID.
+    - **Collection Address**
+    - **Collection Name and Description**
+    - **Collection Uri**:  A URI acts as a gateway to details stored off-chain.
+    - **Royalty Fee:** Display the percentage of the sale price that is given to the original NFT creators every time the NFTs are sold.
+- **Shortcuts**: Enables users to quickly see the total number of Activities and Mutate Event in the collection, allowing for faster access.
+
+---
+
+## Supplies
+
+This section display the all collection's currently holding NFTs which user can search with Token ID of each NFT. Each NFT contains NFT Image, NFT Name and NFT Token ID. User can also click each NFT to navigate to its detail page.
+
+---
+
+## Activities
+
+In this section, you'll find a list of activities that happened with the selected NFT Collection includes: 
+
+- Collection created
+- Minted
+- Transferred
+- Burned
+
+Each entry provides the Tx Hash, Token ID of individual NFT in the collection, Event Type and timestamp.
+
+---
+
+## Mutate Events
+
+This section provides a comprehensive log of all mutation events associated with the selected NFT Collection. These events may include any changes or updates to the description or URI of the collection. 
+
+<Frame>
+    <img src="/images/user-docs/move/nft/collection-mutate-event.jpg" />
+</Frame>
+
+Each entry in this section provides:
+
+- The field that has been mutated
+- Old value
+- New value
+- Timestamp
+- Remark which depend on the mutate event context, one of the following will be displayed:
+    - **Genesis**: For event originating from the genesis block, this will be displayed as “Genesis”
+    - **Tx Hash**: For event created post-genesis through normal processes, it will show the transaction hash.
+    - **Proposal ID**: For event initiated through a proposal, this will the corresponding proposal ID.

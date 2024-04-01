@@ -1,0 +1,36 @@
+---
+title: Deploy Script
+icon: code
+---
+
+Script is a MOVE program that performs a transaction on the blockchain to encapsulate logic that is meant to be executed only once, as opposed to modules, which are collections of code that can be reused and invoked multiple times. You can read more about Script in [Initia Docs](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/modules-and-scripts.md#scripts)
+
+<Frame>
+  <img src="/images/user-docs/move/action/script.jpg" />
+</Frame>
+
+### **Uploading Your  `.mv`  File**
+
+1. Connect your wallet to Celatone
+2. Navigate to the **“Deploy Script”** in the left Side bar.
+3. Click “Click to upload or drag .mv file here” to select your **`.mv`** file, or drag the file into the designated area. The file size must not exceed 1.05MB.
+4. Once selected, the interface will display the script inputs: **`type_args`** and **`args`**.
+
+### **Configuring Script Inputs**
+
+Read more about generics in [Initia Docs.](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/generics.md)
+
+1. **type_args**:
+    - These are type arguments required by your script function.
+    - Specify each type argument using the correct format, for instance, **`0x1::native::u64`**.
+2. **args**:
+    - These are the actual arguments that the script function will use during execution.
+    - Provide the arguments as required by the script, such as integers (**`u64`**), strings, etc.
+- If an error message appears after you attempt to deploy the script, review the message to understand what went wrong. Common errors may relate to type verification or incorrect arguments. Ensure that **`type_args`** and **`args`** match what the script expects.
+
+### **Executing the Script**
+
+1. After verifying that all inputs are correct, review the transaction fee that will be charged for deploying the script.
+2. Click **“Execute Script**” to deploy your script to the blockchain.
+3. You will see a confirmation message with transaction hash upon successful execution.
+    - If the script execution fails, refer to the error message, adjust the inputs accordingly, and try again.

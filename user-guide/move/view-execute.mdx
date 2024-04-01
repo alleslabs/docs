@@ -1,0 +1,101 @@
+---
+title: View / Execute Module
+icon: file-magnifying-glass
+---
+
+
+To understand more about how MOVE module works, we recommend you to read through the documents from [Official Initia Documents](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src)
+
+## Module Interactions
+Each module usually have common properties below.
+
+- **Module Address** (ex. `0x1a3456…ab46ef`): Identifies the account that has published the module to the blockchain network
+- **Module Path** (ex.`0x1a3456…ab46ef::module_name`): The path that consists the publisher of the module and module name
+- **Functions:** There are two main types of functions:
+    - **View Functions**: Functions that do not alter the blockchain state. They are read-only and are used to retrieve information.
+    - **Execute Functions**: Functions that can modify the blockchain state. Executing these functions results in transactions that change data or assets on the blockchain.
+- **Friends**: This property specifies visibility constraints. Functions marked as 'Friend' can only be invoked by the modules or functions listed as friends. This allows for controlled access and interaction between different modules. Read more about Friends in [Initia Docs](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/friends.md)
+- **Structs**: These are custom-defined data structures in MOVE that can contain multiple fields of specified types. Structs are used to represent complex data. Read more about Structs in [Initia Docs](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/structs-and-resources.md)
+
+See more about module in [Module Details page](https://docs.alleslabs.com/user-guide/move/module/detail-page)
+
+
+## Selecting Module to interact
+
+<Frame>
+  <img src="/images/user-docs/move/action/select-module.jpg" />
+</Frame>
+
+1. Click on **“View/Execute”** in the Developer Tools of the sidebar
+2. Click on **“Select Module”** button
+3. You can fill in the module address, module path, or module path with function.
+    - In case you fill in the address, the published modules within the address will be displayed.
+    - After select the module (or fill in the module path), available functions will be displayed.
+4. You can either select the function or click on **“Select Module”** to proceed to interact with the module
+5. Module’s friends will be displayed at the top and available functions will be displayed on the left which you can switch between view and execute functions.
+
+## Functions common properties
+
+You can read more about functions in [Initia Docs.](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/functions.md) After selected the function, you can expand the function information bar to see these information below:
+
+- **visibility**: Indicates whether the function is public, public(friend), or private. Read more about Visibility in [Initia Docs](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/structs-and-resources.md)
+- **is_entry**: Denotes if the function can be called as an entry point to the module. Read more about entry in [Initia Docs](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/functions.md#entry-modifier)
+- **is_view**: Specifies if the function is read-only (View function) or modifying the state (Execute  function).
+- **generic_type_params** specifies placeholders for data types, allowing functions to handle various inputs. **params s**pecifies the input arguments that the function accepts, detailing their types and order. Read more about generics in [Initia Docs.](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/generics.md)
+
+### View Functions
+
+View functions for module in Initia Network refers to the process of retrieving information from a module without altering its state. View functions usually have a **‘Public’** visibility and `is_entry = true`
+
+<Frame>
+  <img src="/images/user-docs/move/action/view.jpg" />
+</Frame>
+
+In Celatone, we provide the set of available view functions for each selected module.
+
+1. You can either select the function during selecting module (displaying on the left side) or after selected the module (**’View’** will be selected as a default).
+2. After select the function (or fill in the module path with function name), general information and available input fields will appear in two separated sections. Read more about generics in [Initia Docs.](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/generics.md)
+    - **type_args:** refers to type arguments that are necessary to specify generic types when interacting with a MOVE module function. They are akin to generics in other programming languages, where you can define a function or module to work with any data type, and the exact data types to be used are specified when the function is called or the module is instantiated.
+        - The **`type_args`** are the actual types that correspond to the **`generic_type_params`** defined in the module. For example, if a generic type parameter is defined with a constraint **"Key"**, the **`type_args`** should be a concrete type that satisfies this constraint.
+    - **args:** refers to the actual parameters or arguments that are passed to a function when it is called. These are the runtime values that the function will operate on.
+        - The **`args`** values must match the **`params`** signature in number, order, and type. The **`params`** act as placeholders in the function definition, specifying the type of arguments the function expects, while **`args`** are the real values provided during function execution.
+3. Submit the query by click **“View”** button or press `cmd + enter` (or `Ctrl + Enter` for Windows) to receive the response in the **“Return Output”**
+
+---
+
+
+### **Execute Functions**
+
+Executing Functions are commands that trigger actions within a module. Each module possesses a unique set of executable commands.
+
+However, not all execute functions are accessible for interaction. Their visibility and **`is_entry`** properties determine this.
+
+
+- **Visibility** (Read more about Visibility in [Initia Docs](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/structs-and-resources.md))
+    - **Public**: Functions that are accessible to any user on the network. They can be executed by anyone.
+    - **Friends**: These functions are restricted to execution by designated friends—specific modules or functions listed in the module's friends list.
+    - **Private**: (Not displayed in the interface) Functions reserved exclusively for the module's publisher and are not visible for public interaction.
+- **is_entry** (Read more about entry in [Initia Docs](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/functions.md#entry-modifier))
+    - **`true`**: Functions with this property can be executed directly through Celatone or by using compatible tools.
+    - **`false`**: These functions cannot be executed directly; they require specific methods for invocation, such as encapsulating them in a **‘Script’** or calling them through particular procedures. See more about Script
+
+<Frame>
+  <img src="/images/user-docs/move/action/execute.jpg" />
+</Frame>
+
+
+In Celatone, the **"Available functions"** section lists all the functions that users can interact with for the currently selected module. Functions that are visible but not interactable are listed under the **"Other functions"** section.
+
+1. **Connect your wallet** to Celatone, by clicking the **“Connect”** button at the top-right of the screen
+2. Click on **“View / Execute”** in the Developer Tools of the sidebar
+3. Click on “**Select Module**” button
+4. You can fill in the module address, module path, or module path with function.
+    - In case you fill in the address, the published modules within the address will be displayed.
+    - After select the module (or fill in the module path), available functions will be displayed.
+5. After select the function (or fill in the module path with function name), general information and available input fields will appear in two separated sections. Read more about generics in [Initia Docs.](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/generics.md)
+    - **type_args:** refers to type arguments that are necessary to specify generic types when interacting with a MOVE module function. They are akin to generics in other programming languages, where you can define a function or module to work with any data type, and the exact data types to be used are specified when the function is called or the module is instantiated.
+        - The **`type_args`** are the actual types that correspond to the **`generic_type_params`** defined in the module. For example, if a generic type parameter is defined with a constraint **"Key"**, the **`type_args`** should be a concrete type that satisfies this constraint.
+    - **args:** refers to the actual parameters or arguments that are passed to a function when it is called. These are the runtime values that the function will operate on.
+        - The **`args`** values must match the **`params`** signature in number, order, and type. The **`params`** act as placeholders in the function definition, specifying the type of arguments the function expects, while **`args`** are the real values provided during function execution.
+6. Submit the transaction by click “**Execute**” button or press `cmd + enter` (or `Ctrl + Enter` for Windows) and approve the transaction.
+7. If the transaction is submitted properly. The modal display the assigned transaction hash with execution details. Otherwise, the error log will display or the transaction will end in failed status.

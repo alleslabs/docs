@@ -51,7 +51,7 @@
   "tabs": [
     {
       "name": "Celatone for Users",
-      "url": "user"
+      "url": "user-guide"
     },
     {
       "name": "Celatone for Developers",
@@ -74,8 +74,8 @@
     {
       "group": "Introduction",
       "pages": [
-        "user/introduction/user-introduction",
-        "user/introduction/block-explorer"
+        "user-guide/introduction/user-introduction",
+        "user-guide/introduction/block-explorer"
       ]
     },
     {
@@ -85,22 +85,22 @@
           "group": "Transaction",
           "icon": "files",
           "pages": [
-            "user/general/transaction/past-txs",
-            "user/general/transaction/detail-page"
+            "user-guide/general/transaction/past-txs",
+            "user-guide/general/transaction/detail-page"
           ]
         },
         {
           "group": "Block",
           "icon": "cube",
           "pages": [
-            "user/general/block/detail-page"
+            "user-guide/general/block/detail-page"
           ]
         },
         {
           "group": "Proposal",
           "icon": "box-ballot",
           "pages": [
-            "user/general/proposal/detail-page"
+            "user-guide/general/proposal/detail-page"
           ]
         }
       ]
@@ -108,42 +108,42 @@
     {
       "group": "CosmWasm",
       "pages": [
-        "user/cosmwasm/deploy-contract",
-        "user/cosmwasm/query-execute",
+        "user-guide/cosmwasm/deploy-contract",
+        "user-guide/cosmwasm/query-execute",
         {
           "group": "Code",
           "icon": "code",
           "pages": [
-            "user/cosmwasm/code/organize",
-            "user/cosmwasm/code/detail-page",
-            "user/cosmwasm/code/attach-json-schema"
+            "user-guide/cosmwasm/code/organize",
+            "user-guide/cosmwasm/code/detail-page",
+            "user-guide/cosmwasm/code/attach-json-schema"
           ]
         },
         {
           "group": "Contract",
           "icon": "file-code",
           "pages": [
-            "user/cosmwasm/contract/organize",
-            "user/cosmwasm/contract/instantiate",
-            "user/cosmwasm/contract/detail-page",
-            "user/cosmwasm/contract/admin-actions",
-            "user/cosmwasm/contract/instantiated-contracts"
+            "user-guide/cosmwasm/contract/organize",
+            "user-guide/cosmwasm/contract/instantiate",
+            "user-guide/cosmwasm/contract/detail-page",
+            "user-guide/cosmwasm/contract/admin-actions",
+            "user-guide/cosmwasm/contract/instantiated-contracts"
           ]
         },
         {
           "group": "Account (CosmWasm)",
           "icon": "user",
           "pages": [
-            "user/cosmwasm/account/organize",
-            "user/cosmwasm/account/detail-page"
+            "user-guide/cosmwasm/account/organize",
+            "user-guide/cosmwasm/account/detail-page"
           ]
         },
         {
           "group": "Osmosis Pools",
           "icon": "chart-pie",
           "pages": [
-            "user/cosmwasm/osmosis/pool-list",
-            "user/cosmwasm/osmosis/pool-detail"
+            "user-guide/cosmwasm/osmosis/pool-list",
+            "user-guide/cosmwasm/osmosis/pool-detail"
           ]
         }
       ]
@@ -151,31 +151,32 @@
     {
       "group": "MOVE (Initia Scan)",
       "pages": [
-        "user/move/publish-module",
-        "user/move/view-execute",
+        "user-guide/move/publish-module",
+        "user-guide/move/view-execute",
+        "user-guide/move/deploy-script",
         {
           "group": "Module",
-          "icon": "code",
+          "icon": "file-code",
           "pages": [
-            "user/move/module/organize",
-            "user/move/module/detail-page"
+            "user-guide/move/module/detail-page"
           ]
         },
         {
           "group": "Account (Move)",
           "icon": "user",
           "pages": [
-            "user/move/account/organize",
-            "user/move/account/detail-page"
+            "user-guide/move/account/organize",
+            "user-guide/move/account/detail-page"
           ]
         },
         {
           "group": "NFTs",
           "icon": "hexagon-vertical-nft",
           "pages": [
-            "user/move/nft/collection",
-            "user/move/nft/detail-page",
-            "user/move/nft/nft-account"
+            "user-guide/move/nft/collection-list",
+            "user-guide/move/nft/collection-detail",
+            "user-guide/move/nft/detail-page",
+            "user-guide/move/nft/nft-account"
           ]
         }
       ]

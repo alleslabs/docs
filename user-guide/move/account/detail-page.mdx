@@ -1,0 +1,125 @@
+---
+title: Account Details
+icon: file-lines
+---
+
+## Overview
+
+<Frame>
+  <img src="/images/user-docs/move/account/move-account-overview.jpg" />
+</Frame>
+
+The **"Overview"** section on the Account Details page provides an overall information of the account being viewed. It typically features a summary of the account's value and quick links to various segments such as assets, delegations, and transaction history.
+
+This section may also highlight the number of [NFTs](/user-guide/move/account/detail-page#nfts), [resources](/user-guide/move/account/detail-page#resources), [modules](/user-guide/move/account/detail-page#modules) and any [proposals](/user-guide/move/account/detail-page#proposals) associated with the account.
+
+---
+
+## Assets
+
+<Frame>
+  <img src="/images/user-docs/move/account/move-account-assets.jpg" />
+</Frame>
+
+The **Asset** section of the Account Details page on Celatone provides a detailed overview of the assets associated with a specific smart contract. This section is divided into:
+
+- **Supported Assets**: Lists all the tokens and assets that are recognized and supported by the contract. Each asset displays its balance and, if available, its equivalent value in a common currency.
+- **Unsupported Assets**: Shows any tokens or assets that are held by the contract but are not officially supported or recognized. These may include less common tokens or those specific to certain functions within the contract such as Factory Token, LP Token, IBC Token, Gamm Token, etc..
+
+For further details and specific functionalities, you would need to refer to the documentation or user interface of the specific blockchain or protocol you're using.
+
+---
+
+## Delegations
+
+<Frame>
+  <img src="/images/user-docs/move/account/move-account-delegations.jpg" />
+</Frame>
+
+The "Delegation" section of a account’s details on the Celatone platform provides insights into the staking aspects of the contract. This section covers:
+
+- **Total Bonded**: The aggregate amount of tokens staked with the validators.
+- **Rewards**: Displays the total rewards accrued from staking activities.
+
+Users can select to see currently delegated assets or unbonding assets.
+
+- **Delegated**: Lists the individual validators to whom tokens are staked, the amount staked, and any rewards from each validator.
+- **Unbonding**: Shows any tokens in the process of unbonding, the amount being unbonded, and the completion date for each unbonding action.
+
+If the contract has any ongoing redelegation processes, users can view these activities by clicking the **"See Active Redelegations"** button, which becomes clickable when redelegations are present.
+
+---
+
+## NFTs
+
+<Frame>
+  <img src="/images/user-docs/move/account/move-account-nfts.jpg" />
+</Frame>
+
+The “NFTs” tab on the Account Details page show any NFTs owned by the user's account. For further information, please see [NFT on Account Detail](https://docs.alleslabs.com/user-guide/move/nft/nft-account)
+
+---
+
+## Transactions
+
+<Frame>
+  <img src="/images/user-docs/move/account/move-account-txs.jpg" />
+</Frame>
+
+The "Transactions" tab on the Account Details page chronicles the activity associated with the user's account. Here's what users can expect to find:
+
+- **Transaction Hash**: Unique identifiers for each transaction.
+- **Messages**: Descriptions of the transaction purpose, such as contract instantiation, contract updates, or executions.
+- **Sender**: The wallet or contract address that initiated the transaction.
+- **Timestamp**: Exact date and time when the transaction was confirmed on the blockchain.
+
+You can filter transactions by their relations or specific actions.
+
+- **Filter by Relations:** To show all transactions, only signed transactions, or related transactions
+- **Filter by Actions**: There are 8 specific actions that can be filtered through the dropdown, which are Send Assets, IBC-related, Instantiate Contract, Store Code, Execute, Migrate, Update Admin, and Clear Admin
+
+---
+
+## Resources
+
+<Frame>
+  <img src="/images/user-docs/move/account/move-account-resources.jpg" />
+</Frame>
+
+The "Resources" tab on the Account Details page show resources that stored in the user's account. Here's what users can expect to find:
+
+- **List of Resources:** Each group, like the one labeled `0x1`, contains resources that grouped by account address. These are usually contain various data types and functionalities associated with the user's account.
+    - **Search Functionality**: A search bar allows users to quickly find resources by name
+- **Individual Resource**: Under each group, users can see individual resources, such as `code` and the number next to it indicates the number of instances or items within that resource.
+- **Resource Details**: Upon expanding a resource, detailed information is displayed. For example, `MetadataStore` shows a JSON object containing metadata attributes. These details typically include identifiers, states, properties, or configuration parameters that are specific to the resource.
+
+Read more about Resources in [Initia Docs](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/structs-and-resources.md)
+
+---
+
+## Modules
+
+<Frame>
+  <img src="/images/user-docs/move/account/move-account-resources.jpg" />
+</Frame>
+
+The "Modules" tab on the Account Details page show modules that stored in the user's account. Here's what users can expect to find:
+
+- **Search Functionality**: A search bar allows users to quickly find resources by name
+- **Individual Module: U**sers can see individual modules and the number next to it indicates the number of view and execute function within that module.
+
+Learn more about module in [Module Detail](https://docs.alleslabs.com/user-guide/move/module/detail-page) Page or [Initia Docs](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/modules-and-scripts.md)
+
+---
+
+## Proposals
+
+
+The "Proposals" tab on the Account Details page provides a list of proposals those are proposed by account. This section features:
+
+- **Proposal ID**: Unique identifiers for each proposal.
+- **Title/Type**: Titles of the proposals and their proposal messages.
+- **Status**: The current status of each proposal (e.g., voting, passed, rejected). See proposal status details in Proposal List
+- **Voting Ends**: Display the date and time that the voting will end or ended.
+- **Resolved Block Height:** The block height that the proposal has resolved and the including messages was implemented.
+- **Proposer:** The address that proposed the proposal.

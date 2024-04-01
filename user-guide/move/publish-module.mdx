@@ -1,0 +1,78 @@
+---
+title: Publish Module
+icon: circle-plus
+---
+
+Publishing a MOVE module to the Initia network would involve uploading the compiled bytecode of the module to the blockchain, which then becomes part of the blockchain's state. This guide provides an overview of the process for publishing and republishing MOVE modules.
+
+On the Initia network, a MOVE module would be a package containing code for smart contracts, which includes the definitions of resources, structs, and functions. See more in [Module Details page](https://docs.alleslabs.com/user-guide/move/module/detail-page)
+
+---
+
+## Publishing Modules
+
+<Frame>
+  <img src="/images/user-docs/move/action/publish.jpg" />
+</Frame>
+
+<Note>
+Please note that each `.mv` file is created to be uploaded by a specific address. Therefore, you cannot use the same `.mv` file to publish a module with different addresses.
+</Note>
+
+1. Connect your wallet to Celatone. 
+2. To begin, navigate to the **Publish/Republish** within the left sidebar.
+3. Uploading Your `.mv` file
+    - Click the **“Click to upload or drag `.mv` file here”** area to select your MOVE module file or simply drag and drop it into the box.
+    - Ensure that the file does not exceed the maximum size of `1.05MB`
+4. The system will display the module path. In some instances, additional information may be presented:
+    - If the connected wallet has previously published the same module, the system will notify you that by uploading this file, you are republishing the module. Refer to the [Republishing Modules section](https://docs.alleslabs.com/user-guide/move/publish-module#republishing-modules) for more details.
+    - If the file was not created to be uploaded by the connected address, the system will display an error message indicating that the file must be uploaded by the designated address only.
+5. To publish more modules in one transaction, simply click on the button **“Publish More Modules”** to add another uploading area.
+    - If you select a different file that publishes the same module as the one mentioned above, the most recently selected file will be the final version used for publishing the module, as the others will be considered republished. You can use the **“Move up”** or **“Move down”** buttons to change the order of the files queued for upload.
+
+6. Select the upgrade policy you wish to apply to the modules you are publishing. This policy is very important for the further upgrades of the published modules.
+
+<Frame>
+  <img src="/images/user-docs/move/action/policy.jpg" />
+</Frame>
+
+    - **Arbitrary:** Select this option if you want to republish the modules without any restrictions.
+    - **Compatible:** Select this option if the republished modules need to maintain several properties and meet certain conditions for compatibility. Click on **“View Conditions”** to see the specified conditions and examples.
+    - **Immutable:** Select this option if you do not want to allow any changes to the module after publishing with this address.
+    
+<Note>
+Please note that all published modules will adhere to the same upgrade policy. If you wish to publish multiple modules with different policies, you must publish them in separate transactions.
+</Note>
+7. Ensure the correctness of your uploading files and upgrade policy, then click on **“Publish Module”** and approve the transaction.
+8. If the modules are published successfully, the system will display brief details about the transaction and published modules. You can navigate to see the module details or interact with its functions by clicking on **“View”** or **“Execute”** buttons.
+
+---
+
+## Republishing Modules
+
+<Frame>
+  <img src="/images/user-docs/move/action/republish.jpg" />
+</Frame>
+
+You can republish the module which serve the purpose to migrate or upgrade the published module by uploading new `.mv` file with similar configurations.
+
+Each policy will provide different flexibility for further upgrades whether you can add new functions without maintaining old functions (Arbitrary), or required to maintain old functions (Compatible). Choosing **“Immutable”** will not allow you to make any changes with this module ever.
+
+1. Connect your wallet that published the modules to Celatone. 
+2. To begin, navigate to the Publish/Republish within the left sidebar.
+3. Select your uploading your `.mv` file that contain same module name and similar configurations.
+4. The system will display the module path with information that you are republishing the existing module and its current upgrade policy.
+    - If the module was published with **“Immutable”** policy, you will not able to proceed the republishing.
+5. To republish other existing modules in one transaction, simply click on the button **“Publish More Modules”** to add another uploading area.
+    - Similar to publishing, if you select a different file that publishes the same module as the one mentioned above, **the most recently selected file will be the final version used for republishing** the module. You can use the **“Move up”** or **“Move down”** buttons to change the order of the files queued for upload.
+6. Select the upgrade policy you wish to apply to the modules you are publishing. 
+    - You can change republishing modules upgrade policy, but will not able to change to the more lenient policy.
+        - ex. Arbitrary can be changed to Compatible or Immutable
+        - Compatible can be changed to Immutable only.
+        - Immutable cannot be changed. 
+
+<Note>
+Please note that all publishing and republishing modules will adhere to the same upgrade policy.
+</Note>
+7. Ensure the correctness of your uploading files and upgrade policy, then click on **“Publish Module”** and approve the transaction.
+8. If the modules are republished successfully, the system will display brief details about the transaction and published modules. You can navigate to see the module details or interact with its functions by clicking on **“View”** or **“Execute”** buttons.

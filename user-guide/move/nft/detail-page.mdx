@@ -1,0 +1,74 @@
+---
+title: NFTs Details
+icon: hexagon-vertical-nft
+---
+
+The **“NFT Detail Page”** on Celatone e provides comprehensive information about an individual NFT. It serves as a place for users to explore in-depth information about each NFT available with key detail like Name, Description, Attributes, Mint information and Histories.
+
+<Frame>
+    <img src="/images/user-docs/move/nft/nft-detail.jpg" />
+</Frame>
+
+---
+
+## NFT Information
+
+- **NFT Image, Name and Description**
+- **NFT Address** which you can click to view as account address.
+- **Holder of the NFT:** Display the account address that is currently holding the NFT.
+- **Token URI**: A URI acts as a gateway to details stored off-chain.
+- **Attribute List**: Attributes are distinct characteristics or traits that set one NFT apart from others in the same collection. The list displays the Attribute Name, Value, and the Percentage of NFTs that possess that particular value.
+
+<Frame>
+    <img src="/images/user-docs/move/nft/nft-overview.jpg" />
+</Frame>
+
+---
+
+## Collection Information
+
+- Collection Name
+- Collection Description
+- `View Collection` Call to action that navigate users to collection detail page
+
+---
+
+## Mint Information
+
+- **Mint Block Height:** Indicates the blockchain height at which the NFT was first minted.
+- **Mint by:** Shows the account address of the creator of the NFT.
+- Depending on the NFT’s creation context, one of the following will be displayed:
+    - **Mint From:** For NFT originating from the genesis block, this will be displayed as “Minted From Genesis.”
+    - **Mint Transaction:** For NFT created post-genesis through normal processes, it will show the transaction details.
+    - **Mint Proposal ID:** For NFT created through a proposal, this will the corresponding proposal ID.
+
+---
+
+## Transaction
+
+In this section, you’ll find a list of transaction hat happened with the selected NFT. Each entry provides: 
+
+- Tx Hash
+- Event Type: Minted, Transferred, Burned
+- Timestamp
+
+---
+
+## Mutate Events
+
+This section provides a comprehensive log of all mutation events associated with the selected NFT. These events may include any changes or updates to the name, description or URI of the NFT.
+
+<Frame>
+    <img src="/images/user-docs/move/nft/nft-mutate-event.jpg" />
+</Frame>
+
+Each entry in this section provides:
+
+- The field that has been mutated
+- Old value
+- New value
+- Timestamp
+- Remark which depend on the mutate event context, one of the following will be displayed:
+    - **Genesis:** For event originating from the genesis block, this will be displayed as “Genesis”
+    - **Tx Hash:** For event created post-genesis through normal processes, it will show the transaction hash.
+    - **Proposal ID:** For event initiated through a proposal, this will the corresponding proposal ID.
