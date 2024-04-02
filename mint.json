@@ -102,6 +102,13 @@
           "pages": [
             "user-guide/general/proposal/detail-page"
           ]
+        },
+        {
+          "group": "Validator",
+          "icon": "user-shield",
+          "pages": [
+            "user-guide/general/validator/detail-page"
+          ]
         }
       ]
     },
