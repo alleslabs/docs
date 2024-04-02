@@ -1,0 +1,56 @@
+---
+title: Validator Details
+icon: file-lines
+---
+
+Validators are nodes that participate in the consensus mechanism by verifying transactions, adding blocks to the blockchain, and executing smart contracts. They ensure the network's integrity and security by staking tokens, which can be slashed if they act maliciously or fail to maintain network uptime. 
+
+Validators also engage in governance by voting on proposals, and they can facilitate cross-chain transactions through IBC relaying. Token holders can delegate their stake to validators, who then share a portion of the validation rewards.
+
+<Frame>
+  <img src="/images/user-docs/pages/validator-detail.jpg" />
+</Frame>
+
+The Validator Details page provides users with detailed insights into the performance and contribution of individual validators on the network. This page is divided into four primary tabs: Overview, Votes, Performance, and Bonded Token Changes.
+
+---
+
+## Overview Tab
+
+- **General Information**: This section provides the validator’s name, their commission rates, estimated annual percentage yield (APR), and the number of delegators. You'll find the validator's address and a link to their website if available.
+- **Voting Power and Uptime**: Key metrics on the validator's influence in the network and their reliability are displayed here.
+- **Recent 100 Blocks**: Shows the validator's uptime over the last 100 blocks, including the number of signed blocks, proposed blocks, and missed blocks.
+- **Current Bonded Tokens and Changes Chart**: Visual graph indicating the amount of bonded tokens currently bonded to the validator and any changes in the last 24 hours. Click on “See all related transactions” view navigate you to the Bonded Token Changes Tab
+- **Recently Proposed Blocks**: Visualize the validator’s recent activity with a list of the most recently proposed blocks. Click on View all button view navigate you to the Performance Tab
+
+---
+
+## Votes Tab
+
+- **Voted Proposals**: A list of governance proposals on which the validator has voted. Each proposal includes the proposal ID, title, type, current status, the validator's vote, and the resolved block height.
+- **Filtering Options**: Users can filter proposals based on the vote answer to quickly see how the validator voted on different proposals.
+- **Search:** Users can search through proposals with Proposal ID or Proposal Title to see how validator voted on specific proposals.
+
+<Note>
+Please note that the validator may not have voted on the proposal due to ineligibility, such as being recently added to the network.
+</Note>
+See more about proposal and validator votes in [Proposal Details](https://docs.alleslabs.com/user-guide/general/proposal/detail-page)
+
+---
+
+## Performance Tab
+
+- **Uptime Metrics**: Shows the validator's uptime over the last 100 blocks, including the number of signed blocks, proposed blocks, and missed blocks.
+    - **Signed Block**: Validators validate and endorse a new block by signing it, attesting that they agree with the transactions contained within.
+    - **Proposed Block**: A selected validator is temporarily given the right to gather transactions, create a new block, and propose it to the network for validation.
+    - **Missed Block**: If a validator fails to sign or propose a block when they are supposed to, it is recorded as a missed block, which can affect their reliability and uptime.
+- **Recent Blocks**: Visualize the validator’s recent activity with a list of the most recently proposed blocks.
+- **Jailed/Slashed**: If the validator has been penalized or jailed within last 90 days (temporarily removed from the validator set for misconduct), details will be listed here, including the block height at which it occurred.
+    - **Jail** is a temporary suspension for failing to meet network standards, during which a validator cannot participate in consensus or earn rewards.
+    - **Unjail** is the process by which a validator reactivates their status after addressing the issues that caused their jailing.
+    - **Slash** refers to the penalty where a portion of a validator’s staked tokens are forfeited due to serious infractions, like double-signing or extended downtime.
+
+## Bonded Token Changes Tab
+
+- **Current Bonded Tokens and Changes Chart**: Visual graph indicating the amount of bonded tokens currently bonded to the validator and any changes in the last 24 hours.
+- **Delegation-Related Transactions**: A list of transactions that includes transaction hashes, senders, actions taken (like delegate, undelegate, delegate cancellation, etc.), changes in bonded tokens, and timestamps.
