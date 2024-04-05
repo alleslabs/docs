@@ -123,15 +123,27 @@ Lists the latest governance proposals. You can search with Proposal ID or Propos
 - **Resolved Block Height:** Display the block height at which the proposal was resolved (Passed, Rejected, or Failed) within the network.
 - Clicking on any entry will send you to [Proposal details page](https://docs.alleslabs.com/user-guide/general/proposal/detail-page)
 
-## Recent Validators (Coming Soon)
+## Validators
+<Frame>
+  <img src="/images/user-docs/pages/validator-list.jpg" />
+</Frame>
 
-The "Recent Validators" feature is currently under development and will be available soon. This feature will provide valuable information about the network validators.
+Validator List on Celatone provides an overview of all validators participating in the network. This list is essential for network participants to assess the validators and make informed decisions about which validators to support. The main feature of this page is the validator list table, which includes:
 
-~~Will feature information about network validators. Likely to include:~~
+- **Rank**: The position of a validator relative to others based on their voting power.
+- **Validator**: The name or identity of the validator.
+- **Voting Power**: A percentage representing the validator’s relative power in the network, based on the amount of the native token they have staked or that has been delegated to them.
+- **Uptime (100B)**: The reliability of a validator, shown as a percentage of time they have been online and available over the last 100 blocks.
+- **Commission**: The fee that validators charge for their services, displayed as a percentage of rewards earned by delegators.
+- **Cumulative Voting Power**: Hovering over a “33%” or “66%” tag will reveal a tooltip indicating the cumulative voting power of the top validators. This metric is crucial for evaluating the network's decentralization health.
+    - A cumulative voting power of 33% or 66% serves as a benchmark for understanding the distribution of power. If the top validators hold a majority of the power (e.g., over 33% or 66%), it could indicate a more centralized network.
 
-- **~~Validator Name:** Name of the validator.~~
-- **~~Voting Power:** Represents the validator's influence in the network.~~
-- **~~Commission:** Fees charged by the validator.~~
+You can refine the list of validators using the following tools:
+
+- **Show only**: A dropdown that allows you to filter validators by their status, such as active or inactive.
+- **Search**: Use this feature to quickly find validators by typing a validator's name or address into the search bar.
+
+For desktop users, you can click on the table header to sort the list by selected attribute.
 
 ## Osmosis Pools
 

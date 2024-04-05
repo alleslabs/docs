@@ -126,20 +126,14 @@
               "group": "Codes",
               "icon": "code",
               "pages": [
-                "user-guide/cosmwasm/codes/organize",
-                "user-guide/cosmwasm/codes/detail-page",
-                "user-guide/cosmwasm/codes/attach-json-schema"
+                "user-guide/cosmwasm/codes/detail-page"
               ]
             },
             {
               "group": "Contracts",
               "icon": "file-code",
               "pages": [
-                "user-guide/cosmwasm/contracts/organize",
-                "user-guide/cosmwasm/contracts/instantiate",
-                "user-guide/cosmwasm/contracts/detail-page",
-                "user-guide/cosmwasm/contracts/admin-actions",
-                "user-guide/cosmwasm/contracts/instantiated-contracts"
+                "user-guide/cosmwasm/contracts/detail-page"
               ]
             }
           ]
