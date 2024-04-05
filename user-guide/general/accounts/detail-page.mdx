@@ -1,0 +1,184 @@
+---
+title: Account Details
+icon: file-lines
+---
+
+## Overview
+
+Celatone's Account Details page shows a comprehensive overview of the account's activities, assets, delegations, transactions, and other information. The page is divided into several sections.
+
+<Frame>
+    <img src="/images/user-docs/account/account-overview.jpg" />
+</Frame>
+
+## Core
+
+The following sections apply to most instances of Celatone, regardless of chain-specific variations. Any differences specific to a chain will be noted.
+
+### Assets
+
+<Frame>
+    <img src="/images/user-docs/account/account-assets.jpg" />
+</Frame>
+
+The assets section provides an overview of the assets held by the address. The list of assets is divided into two categories; supported and unsupported assets.
+
+- **Supported Assets**: The primary assets that are supported and recognized by Celatone. For each assets, Celatone displays the asset's icon, symbol, and balance. If pricing data is available, the balance's value in USD is also displayed.
+- **Unsupported Assets**: These are other assets held by the address but are not supported by Celatone. The list includes the asset's denom and balance.
+
+### Staking
+
+<Frame>
+    <img src="/images/user-docs/account/account-delegations.jpg" />
+</Frame>
+
+<Note> This section only applies to chain with staking enabled. Account pages on chain using other consensus mechanisms or designs (e.g. Replicated Security, minitias) will not have this section. </Note>
+
+The delegations section gives an overview of the address's staking activities. Users can view details about staked tokens, rewards, and more.
+
+At the top, you can see the total assets staked, rewards earned, and pending commission (for validator addresses). Each delegation to a validator displays the validator's moniker, delegated token amount, and any unclaimed rewards. Any active unbonding actions show the amount being unbonded and completion dates
+
+### Transactions
+
+<Frame>
+    <img src="/images/user-docs/account/account-txs.jpg" />
+</Frame>
+
+
+The transactions tab shows the a list of historical transactions associated with the account. The list includes the transaction hash, message, sender, and timestamp. You can filter transactions by their relations or specific actions.
+
+There are two types of transactions that can show up in the list; **signed transactions** and **related transactions**.
+
+- **Signed transactions** are transactions that are directly signed and initiated by the account.
+- **Related transactions** are transactions that are initiated by another account, but involve the account. This includes cases where the account is the recipient of the transaction, or generally where the account is involved in the transaction. 
+
+
+{ /* 
+The "Transactions" tab on the Account Details page chronicles the activity associated with the user's account. Here's what users can expect to find:
+
+- **Transaction Hash**: Unique identifiers for each transaction.
+- **Messages**: Descriptions of the transaction purpose, such as contract instantiation, contract updates, or executions.
+- **Sender**: The wallet or contract address that initiated the transaction.
+- **Timestamp**: Exact date and time when the transaction was confirmed on the blockchain.
+
+You can filter transactions by their relations or specific actions.
+
+- **Filter by Relations:** To show all transactions, only signed transactions, or related transactions
+- **Filter by Actions**: There are 8 specific actions that can be filtered through the dropdown, which are Send Assets, IBC-related, Instantiate Contract, Store Code, Execute, Migrate, Update Admin, and Clear Admin
+ */}
+
+### Proposals
+
+<Frame>
+    <img src="/images/user-docs/account/account-proposals.jpg" />
+</Frame>
+
+This section provides a list of on-chain governance proposals that the account has created. 
+
+{ /* The "Proposals" tab on the Account Details page provides a list of proposals those are proposed by account. This section features:
+
+- **Proposal ID**: Unique identifiers for each proposal.
+- **Title/Type**: Titles of the proposals and their proposal messages.
+- **Status**: The current status of each proposal (e.g., voting, passed, rejected). See proposal status details in [Proposal List](https://docs.alleslabs.com/user-guide/introduction/block-explorer#recent-proposals)
+- **Voting Ends**: Display the date and time that the voting will end or ended.
+- **Resolved Block Height:** The block height that the proposal has resolved and the including messages was implemented.
+- **Proposer:** The address that proposed the proposal.
+ */}
+
+## CosmWasm
+
+<Note> The section below only applies to instances of Celatone on chains with CosmWasm smart contract support. </Note>
+
+### Codes
+
+<Frame>
+    <img src="/images/user-docs/account/account-codes.jpg" />
+</Frame>
+
+The codes tab shows a list of smart contract codes uploaded by the account. Each entry includes the code ID, CW2 info (if available), uploader address, and the number of instantiated contracts. Users can instantiate contracts from each code entry if the code's permission allows.
+
+{/* 
+The "Codes" tab within the Account Details page display stored code IDs that the user's account has uploaded. Here's what users can expect to find:
+
+- **Code ID**: Display unique identifiers for each uploaded code.
+- **Code Name**: Show the name assigned to the code, which typically describes its function or purpose.
+- **CW2 Info**: Indicate the compatibility or versioning information of the CosmWasm standard.
+- **Contracts**: List the number of contracts that have been instantiated from this code.
+- **Uploader**: Identify the account that uploaded the code.
+- **Permission**: Specify the permissions required to instantiate contracts from this code. Learn more about [instantiate permission](https://docs.alleslabs.com/user-guide/cosmwasm/code/detail-page#code-information-section)
+- **Instantiate**: You can instantiate a contract from the code you're viewing, provided the instantiate button is enabled. This availability depends on the specific instantiation permissions defined for the code.
+- **Save Code:** You can save the code for later use. See more in [Organize Code](https://docs.alleslabs.com/user-guide/cosmwasm/code/organize) through Celatone
+*/}
+
+### Contracts
+
+<Frame>
+    <img src="/images/user-docs/account/account-codes.jpg" />
+</Frame>
+
+This section displays a list of smart contracts created by the account. Each entry includes the contract address, name, timestamp, and the number of associated transactions. Any user-added tags and labels via the Saved Contracts feature are also shown.
+
+{/* 
+The "Contracts" tab in the Account Details page displays a list of smart contracts instantiated by the account. For each contract, the tab provides:
+
+- **Contract Address**: Unique addresses identifying each contract.
+- **Contract Name**: The name given to the contract for easier recognition. Contract label will display as default.
+- **Tags:** You can add tags to the contract to filter them later.
+- **Timestamp**: The blockchain block number at which the contract was created.
+- **Save Contract:** You can save the contract for later use. See more in [Organize Contract](https://docs.alleslabs.com/user-guide/cosmwasm/contract/organize) through Celatone
+ */}
+
+### Contracts Admin
+
+<Frame>
+    <img src="/images/user-docs/account/account-admin.jpg" />
+</Frame>
+
+The admin tab shows a list of smart contracts for which the current account being viewed is an admin of. The information presented here is similar to what is provided in the “Contracts” tab.
+
+## Move
+
+<Note> The section below only applies to instances of Celatone on chains with Move smart contract support. This currently only includes Initia and Move-based minitias.</Note>
+
+### Resources
+
+<Frame>
+  <img src="/images/user-docs/move/account/move-account-resources.jpg" />
+</Frame>
+
+The resources tab shows a list of [resources](https://move-language.github.io/move/structs-and-resources.html) stored in the user's account. Each group can be expanded to view individual resources and their details.
+
+{/* The "Resources" tab on the Account Details page show resources that stored in the user's account. Here's what users can expect to find:
+
+- **List of Resources:** Each group, like the one labeled `0x1`, contains resources that grouped by account address. These are usually contain various data types and functionalities associated with the user's account.
+    - **Search Functionality**: A search bar allows users to quickly find resources by name
+- **Individual Resource**: Under each group, users can see individual resources, such as `code` and the number next to it indicates the number of instances or items within that resource.
+- **Resource Details**: Upon expanding a resource, detailed information is displayed. For example, `MetadataStore` shows a JSON object containing metadata attributes. These details typically include identifiers, states, properties, or configuration parameters that are specific to the resource.
+
+Read more about Resources in [Initia Docs](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/structs-and-resources.md) */}
+
+### Modules
+
+<Frame>
+  <img src="/images/user-docs/move/account/move-account-resources.jpg" />
+</Frame>
+
+The modules tab shows a list of modules deployed by the user. Each entry shows the module's name, along with the number of view and execute functions the module exposes. Clicking on each entry will show more details about the module through the [Module Detail](/user-guide/introduction/overview) page.
+
+{/* 
+The "Modules" tab on the Account Details page show modules that stored in the user's account. Here's what users can expect to find:
+
+- **Search Functionality**: A search bar allows users to quickly find resources by name
+- **Individual Module: U**sers can see individual modules and the number next to it indicates the number of view and execute function within that module.
+
+Learn more about module in [Module Detail](https://docs.alleslabs.com/user-guide/move/module/detail-page) Page or [Initia Docs](https://github.com/initia-labs/move/blob/initia-move/documentation/book/src/modules-and-scripts.md) */}
+
+### NFTs
+
+<Note> NFT data are currently only available on Celatone deployments on Initia and Move-based minitias. </Note>
+
+<Frame>
+  <img src="/images/user-docs/move/account/move-account-nfts.jpg" />
+</Frame>
+
+{/* The “NFTs” tab on the Account Details page show any NFTs owned by the user's account. For further information, please see [NFT on Account Detail](https://docs.alleslabs.com/user-guide/move/nft/nft-account) */}

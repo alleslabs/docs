@@ -61,15 +61,23 @@
   "navigation": [
     {
       "group": "Welcome",
-      "pages": ["home/introduction"]
+      "pages": [
+        "home/introduction"
+      ]
     },
     {
       "group": "Getting Started",
-      "pages": ["home/overview"]
+      "pages": [
+        "home/overview"
+      ]
     },
     {
       "group": "Getting Started",
-      "pages": ["celatone/introduction", "celatone/quickstart", "celatone/supported-networks"]
+      "pages": [
+        "celatone/introduction",
+        "celatone/quickstart",
+        "home/supported-networks"
+      ]
     },
     {
       "group": "For Users",
@@ -122,11 +130,17 @@
     },
     {
       "group": "Resources",
-      "pages": ["celatone/changelog", "celatone/faq"]
+      "pages": [
+        "celatone/changelog",
+        "celatone/faq"
+      ]
     },
     {
       "group": "Getting Started",
-      "pages": ["aldus/introduction", "aldus/overview"]
+      "pages": [
+        "aldus/introduction",
+        "aldus/overview"
+      ]
     },
     {
       "group": "REST API",
@@ -172,5 +186,7 @@
     "suggestEdit": true,
     "thumbsRating": true
   },
-  "openapi": ["/openapi.json"]
+  "openapi": [
+    "/openapi.json"
+  ]
 }
