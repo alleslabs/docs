@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Alles Docs",
+  "name": "Celatone Docs",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -38,11 +38,6 @@
       "name": "Discord",
       "icon": "discord",
       "url": "https://links.alleslabs.com/discord"
-    },
-    {
-      "name": "Telegram Announcements",
-      "icon": "telegram",
-      "url": "https://t.me/alleslabs"
     }
   ],
   "primaryTab": {
@@ -50,12 +45,12 @@
   },
   "tabs": [
     {
-      "name": "Celatone for Users",
+      "name": "User Guide",
       "url": "user-guide"
     },
     {
-      "name": "Celatone for Developers",
-      "url": "development"
+      "name": "Developers",
+      "url": "developers"
     }
   ],
   "navigation": [
@@ -68,172 +63,169 @@
     {
       "group": "Getting Started",
       "pages": [
-        "home/overview"
+        "home/quickstart",
+        "home/supported-networks"
       ]
     },
     {
-      "group": "Introduction",
+      "group": "Miscellaneous",
       "pages": [
-        "user-guide/introduction/user-introduction",
-        "user-guide/introduction/block-explorer"
+        "home/faq"
       ]
     },
     {
-      "group": "General",
+      "group": "Core",
       "pages": [
+        "user-guide/introduction/overview",
         {
-          "group": "Transaction",
-          "icon": "files",
+          "group": "Accounts",
+          "icon": "user",
           "pages": [
-            "user-guide/general/transaction/past-txs",
-            "user-guide/general/transaction/detail-page"
+            "user-guide/general/accounts/detail-page"
           ]
         },
         {
-          "group": "Block",
+          "group": "Blocks",
           "icon": "cube",
           "pages": [
-            "user-guide/general/block/detail-page"
+            "user-guide/general/blocks/detail-page"
           ]
         },
         {
-          "group": "Proposal",
+          "group": "Transactions",
+          "icon": "files",
+          "pages": [
+            "user-guide/general/transactions/past-txs",
+            "user-guide/general/transactions/detail-page"
+          ]
+        },
+        {
+          "group": "Proposals",
           "icon": "box-ballot",
           "pages": [
-            "user-guide/general/proposal/detail-page"
+            "user-guide/general/proposals/detail-page"
           ]
         },
         {
-          "group": "Validator",
+          "group": "Validators",
           "icon": "user-shield",
           "pages": [
-            "user-guide/general/validator/detail-page"
+            "user-guide/general/validators/detail-page"
           ]
         }
       ]
     },
     {
-      "group": "CosmWasm",
+      "group": "Peripherals",
       "pages": [
-        "user-guide/cosmwasm/deploy-contract",
-        "user-guide/cosmwasm/query-execute",
         {
-          "group": "Code",
-          "icon": "code",
+          "group": "CosmWasm",
+          "icon": "crab",
           "pages": [
-            "user-guide/cosmwasm/code/organize",
-            "user-guide/cosmwasm/code/detail-page",
-            "user-guide/cosmwasm/code/attach-json-schema"
+            {
+              "group": "Codes",
+              "icon": "code",
+              "pages": [
+                "user-guide/cosmwasm/codes/detail-page"
+              ]
+            },
+            {
+              "group": "Contracts",
+              "icon": "file-code",
+              "pages": [
+                "user-guide/cosmwasm/contracts/detail-page"
+              ]
+            }
           ]
         },
         {
-          "group": "Contract",
-          "icon": "file-code",
+          "group": "Initia",
+          "icon": "bone",
           "pages": [
-            "user-guide/cosmwasm/contract/organize",
-            "user-guide/cosmwasm/contract/instantiate",
-            "user-guide/cosmwasm/contract/detail-page",
-            "user-guide/cosmwasm/contract/admin-actions",
-            "user-guide/cosmwasm/contract/instantiated-contracts"
+            {
+              "group": "Modules",
+              "icon": "file-code",
+              "pages": [
+                "user-guide/move/modules/detail-page",
+                "user-guide/move/view-execute"
+              ]
+            },
+            {
+              "group": "NFTs",
+              "icon": "hexagon-vertical-nft",
+              "pages": [
+                "user-guide/move/nfts/collection-list",
+                "user-guide/move/nfts/collection-detail",
+                "user-guide/move/nfts/detail-page",
+                "user-guide/move/nfts/nft-account"
+              ]
+            }
           ]
         },
         {
-          "group": "Account (CosmWasm)",
-          "icon": "user",
+          "group": "Osmosis",
+          "icon": "vial",
           "pages": [
-            "user-guide/cosmwasm/account/organize",
-            "user-guide/cosmwasm/account/detail-page"
-          ]
-        },
-        {
-          "group": "Osmosis Pools",
-          "icon": "chart-pie",
-          "pages": [
-            "user-guide/cosmwasm/osmosis/pool-list",
-            "user-guide/cosmwasm/osmosis/pool-detail"
+            "user-guide/osmosis/pool-list",
+            "user-guide/osmosis/pool-detail"
           ]
         }
-      ]
-    },
-    {
-      "group": "MOVE (Initia Scan)",
-      "pages": [
-        "user-guide/move/publish-module",
-        "user-guide/move/view-execute",
-        "user-guide/move/deploy-script",
-        {
-          "group": "Module",
-          "icon": "file-code",
-          "pages": [
-            "user-guide/move/module/detail-page"
-          ]
-        },
-        {
-          "group": "Account (Move)",
-          "icon": "user",
-          "pages": [
-            "user-guide/move/account/organize",
-            "user-guide/move/account/detail-page"
-          ]
-        },
-        {
-          "group": "NFTs",
-          "icon": "hexagon-vertical-nft",
-          "pages": [
-            "user-guide/move/nft/collection-list",
-            "user-guide/move/nft/collection-detail",
-            "user-guide/move/nft/detail-page",
-            "user-guide/move/nft/nft-account"
-          ]
-        }
-      ]
-    },
-    {
-      "group": "Getting Started",
-      "pages": [
-        "development/introduction",
-        "development/quickstart",
-        "development/supported-networks"
       ]
     },
     {
       "group": "Architecture",
       "pages": [
-        "development/architecture/overview",
+        "developers/architecture/overview",
         {
           "group": "Components",
           "icon": "puzzle",
           "pages": [
-            "development/architecture/components/indexer",
-            "development/architecture/components/aldus-api",
-            "development/architecture/components/price-cacher",
-            "development/architecture/components/celatone-api",
-            "development/architecture/components/frontend"
+            "developers/architecture/components/indexer",
+            "developers/architecture/components/aldus-api",
+            "developers/architecture/components/price-cacher",
+            "developers/architecture/components/celatone-api",
+            "developers/architecture/components/frontend"
           ]
         }
       ]
     },
     {
-      "group": "For Developers",
+      "group": "Developer Features",
       "pages": [
         {
-          "group": "Local Deployment",
-          "icon": "map-pin",
+          "group": "CosmWasm",
+          "icon": "crab",
           "pages": [
-            "development/local-deployment/introduction",
-            "development/local-deployment/dependencies",
-            "development/local-deployment/indexer",
-            "development/local-deployment/frontend",
-            "development/local-deployment/customization"
+            "developers/cosmwasm/upload-instantiate",
+            "developers/cosmwasm/query-execute",
+            {
+              "group": "Codes",
+              "icon": "code",
+              "pages": [
+                "developers/cosmwasm/codes/organize",
+                "developers/cosmwasm/codes/attach-json-schema"
+              ]
+            },
+            {
+              "group": "Contracts",
+              "icon": "file-code",
+              "pages": [
+                "developers/cosmwasm/contracts/organize",
+                "developers/cosmwasm/contracts/instantiate",
+                "developers/cosmwasm/contracts/admin-actions",
+                "developers/cosmwasm/contracts/instantiated-contracts"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "Initia",
+          "icon": "bone",
+          "pages": [
+            "developers/initia/move/publish-module",
+            "developers/initia/move/deploy-script"
           ]
         }
-      ]
-    },
-    {
-      "group": "Resources",
-      "pages": [
-        "development/changelog",
-        "development/faq"
       ]
     }
   ],
