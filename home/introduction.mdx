@@ -14,13 +14,12 @@ description: Welcome to Celatone
 
     <CardGroup cols={2}>
       <Card
-        title="About"
-        icon="circle-info"
-        href="/home/about"
+        title="Quickstart"
+        icon="wand-magic-sparkles"
+        href="/home/quickstart"
       >
-        Learn more about Celatone and its features
+      Begin your journey with Celatone
       </Card>
-
       <Card
         title="Supported Networks"
         icon="chart-network"
@@ -30,40 +29,63 @@ description: Welcome to Celatone
       </Card>
     </CardGroup>
 
-## For Users
+## Celatone User Guide
 
     <CardGroup cols={2}>
       <Card
         title="Block Explorer"
         icon="hive"
-        href="https://mintlify.com/docs/settings/global"
+        href="/user-guide/introduction/overview"
       >
       Explore the features of Celatone's explorer
       </Card>
       <Card
-        title="Developer Tools"
-        icon="file-code"
-        href="https://mintlify.com/docs/api-playground/openapi"
+        title="CosmWasm"
+        icon="crab"
+        href="/user-guide/cosmwasm"
       >
-      Learn how to use Celatone's developer tools
+      Explore supporting features for Cosmwasm
       </Card>
-    </CardGroup>
+      <Card
+        title="Initia"
+        icon="bone"
+        href="/user-guide/initia"
+      >
+      Explore supporting features for Initia
+      </Card>
+      <Card
+        title="Osmosis"
+        icon="vial"
+        href="/user-guide/osmosis"
+      >
+      Explore supporting features for Osmosis
+      </Card>
+      </CardGroup>
 
 ## For Developers
 
-    <CardGroup cols={2}>
-      <Card
-        title="Deploy"
-        icon="arrow-up-to-line"
-        href="https://mintlify.com/docs/settings/global"
-      >
-      Deploy your own instance of Celatone locally or on the cloud
-      </Card>
+    <CardGroup cols={1}>
       <Card
         title="Technical Architecture"
         icon="sitemap"
-        href="https://mintlify.com/docs/api-playground/openapi"
+        href="/developers/architecture/overview"
       >
       Quickly glance through the high-level architecture of Celatone
+      </Card>
+    </CardGroup>
+      <CardGroup cols={2}>
+      <Card
+        title="Deploy Contracts on CosmWasm"
+        icon="arrow-up-to-line"
+        href="/developers/cosmwasm"
+      >
+      Store code and instantiate contract through user interface
+      </Card>
+      <Card
+        title="Publish MOVE Modules"
+        icon="arrow-up-to-line"
+        href="/developers/initia"
+      >
+      Publish module to the Initia network
       </Card>
     </CardGroup>
