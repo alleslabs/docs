@@ -9,8 +9,8 @@ icon: binoculars
 
 Celatone's explorer architecture consits of the following main components:
 
-- [**Frontend**](./components/frontend): The main web interface for the explorer
-- [**Celatone API**](./components/celatone-api): An API middleware that aggregates data from the multiple sources (indexer, price cacher, etc) and provides a unified API for the frontend
 - [**Indexer**](./components/indexer): A service that indexes the blockchain and stores the data in a database
-- [**Price Cacher**](./components/price-cacher): A service that caches asset/token price data from external sources and stores it in a database
 - [**Aldus API**](./components/aldus-api): A registry of blockchain label data (e.g. token name/symbols, accounts, contracts) exposed through an API
+- [**Price Cacher**](./components/price-cacher): A service that caches asset/token price data from external sources and stores it in a database
+- [**Celatone API**](./components/celatone-api): An API middleware that aggregates data from the multiple sources (indexer, price cacher, etc) and provides a unified API for the frontend
+- [**Frontend**](./components/frontend): The main web interface for the explorer

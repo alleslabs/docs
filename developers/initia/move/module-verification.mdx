@@ -1,0 +1,92 @@
+---
+title: Module Verification Guideline
+icon: badge-check
+---
+
+## Overview
+
+The Move Module Verification feature allows users to verify their Move modules, providing enhanced credibility with a verified badge. This verification process ensures that the deployed module on the blockchain corresponds to the provided source code, giving users confidence in its authenticity.
+
+Since the development of Move modules heavily depends on using the standard libraries on the network, having access to the source code of these related modules is crucial and allows for better alignment with the existing infrastructure.
+
+Please note that Module Verification is progressing without any involvement from your connected wallet.
+
+## Steps to Submit for Verify Modules
+
+### 1. Upload folder
+
+- Click or drag a folder containing source codes and the `Move.toml` file.
+- Ensure the folder format matches the required structure:
+    
+    ```arduino
+    project_folder
+    ├── sources
+    │   ├── account.move
+    │   ├── dex.move
+    │   ├── oracle.move
+    │   └── more .move files ...
+    └── Move.toml
+    ```
+    
+
+If your modules need to call functions from other modules outside the scope of the uploaded modules, such as the standard libraries (0x1), it is essential to include the paths to these modules within the `Move.toml` file. Failure to do so will result in verification failure. Notable cases where this is necessary include:
+
+- 0x1
+- GitHub links to external modules
+
+Here is an example of a `Move.toml` configuration file for a project:
+
+```toml
+[package]
+name = "NiceMoves"
+version = "1.0.0"
+
+[dependencies]
+InitiaStdlib = { git = "https://github.com/initia-labs/movevm.git", subdir = "precompile/modules/initia_stdlib", rev = "9afe29f1040f488e087d67bdc1befb6592b5d4b7" }
+
+[addresses]
+std = "0x1"
+account = "0xb9fe1fd018852d49cd066379ba314f94dce57f16"
+minitswap = "0x42cd8467b1c86e59bf319e5664a09b6b5840bb3fac64f5ce690b5041c530565a"
+```
+
+This configuration specifies the package name and version, dependencies with GitHub links, and addresses for various modules, ensuring that the module verification process aligns with the expected sources and addresses.
+
+### 2. Ensure the structure correctness
+
+After selecting the folder, the system will display whether the 'move files' and 'Move.toml' file were found. It will also show the generated filemap to ensure that the files in the folder are structured correctly, as mentioned above. 
+
+### 3. Add short description as reminder
+
+Add a short description for the verification request. This task name will be saved locally in your device.
+
+### 4. Submit for Verification
+
+Click "Upload file and Submit" to start the verification process. You can check the verification progress through “My Past Verifications”
+
+## Checking your verification request
+
+After submitted your Move module verification request, it will be processed and display one of the following statuses.
+
+- **Pending**: Your request is in the queue, waiting to be processed. If there are other requests in the system, your submitted request will be processed in the order it was received.
+- **Verifying**: The verification process is currently underway. The result will be available shortly.
+- **Completed**: Your request has been successfully processed, and the modules have been verified.
+- **Failed**: The verification request could not be completed due to errors. Possible causes include:
+    - Incorrect folder structure
+    - Filemap does not match the uploaded folder structure
+    - `Move.toml` file is missing critical data or contains incorrect data
+    - Module functions are referenced but not available for call, which may include both your modules and external modules
+
+And of course, you can resubmit the verification request again without any restrictions.
+
+**Notes**
+
+- All modules within the folder will be verified as a single batch.
+- The interface shows the following steps: executing the request, querying the checksum, and completing the request.
+- Ensure that the uploaded files adhere to the guidelines to prevent verification failures.
+
+## My Past Verifications
+
+You can access all of your verifications that has been requested from your device’s browser through “My Past Verifications”. 
+
+Please note that Module Verification is progressing without any involvement from your connected wallet. So the past verifications will not display in other browsers or devices.
