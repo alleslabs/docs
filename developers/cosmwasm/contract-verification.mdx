@@ -8,6 +8,10 @@ icon: badge-check
 
 In the CosmWasm Network, instantiated contracts form the foundation of many protocols and applications. They are available for querying information and executing messages to submit transactions. However, without accessible source code or schema, users find it challenging to understand how the contracts work. They often have to guess the available messages and their parameters or arguments to interact with the contracts correctly. "Contract Verification" aims to address these issues.
 
+<Frame>
+    <img src="/images/user-docs/verifications/wasm/verified-code.jpg" />
+</Frame>
+
 ## Benefits from Contract Verification
 
 Contract verification in Celatone allows code or contract owners to submit requests for verification. Similar to existing networks, if the stored code is verified, users will be able to access its source code and interact with its contract instances through query/execute with generated JSON Schema, making it more user-friendly.
@@ -33,18 +37,31 @@ There are 3 main navigation path to “Verify Code”
 
 1. **After stored the code:** The system would ask if you would like to verify the code or skip and proceed to instantiate contrct
 <Frame>
-    <img src="/images/user-docs/verifications/wasm/after-stored-code.png" />
+    <img src="/images/user-docs/verifications/wasm/after-stored-code.jpg" />
 </Frame>
 2. **Code Details**
 3. **Contract Details**
 
+<Frame>
+    <img src="/images/user-docs/verifications/wasm/entry-point.jpg" />
+</Frame>
+
+
 #### Step 2: Fill in the required input
+
+<Frame>
+    <img src="/images/user-docs/verifications/wasm/verify-publish-source-code.jpg" />
+</Frame>
 
 As mentioned in the prerequisite action, users need to provide input that indicates the stored code. 
 
 <Note> If there is any incorrect input in the field and the user submits the request, it is likely that the verification will fail. However, users can always resubmit the verification until it succeeds.</Note>
 
 ## See Contract Verification Progress
+
+<Frame>
+    <img src="/images/user-docs/verifications/wasm/contract-verification-progress.jpg" />
+</Frame>
 
 After submit the request, the verification process could take several hours depending on code complexity as it would proceed with these processes:
 
@@ -64,6 +81,10 @@ After submit the request, the verification process could take several hours depe
 
 ## Verification Status
 There are 4 possible verification statuses for each code, which also reflect on the contract instances for the code.
+
+<Frame>
+    <img src="/images/user-docs/verifications/wasm/status.jpg" />
+</Frame>
 
 1. **Unverified**: This is the default state for any stored codes. Users can verify these codes.
 2. **In Progress:** The viewing code is undergoing the verification process, which might take several hours. You can check which step is currently in progress.
