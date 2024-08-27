@@ -1,0 +1,96 @@
+---
+title: Code Verification
+icon: badge-check
+---
+
+<Frame>
+    <img src="/images/user-docs/verifications/wasm/cover.jpg" />
+</Frame>
+
+## Background
+
+In the CosmWasm Network, instantiated contracts form the foundation of many protocols and applications. They are available for querying information and executing messages to submit transactions. However, without accessible source code or schema, users find it challenging to understand how the contracts work. They often have to guess the available messages and their parameters or arguments to interact with the contracts correctly. "Code Verification" aims to address these issues.
+
+<Frame>
+    <img src="/images/user-docs/verifications/wasm/verified-code.jpg" />
+</Frame>
+
+## Benefits from Code Verification
+
+Code verification in Celatone allows code or contract owners to submit requests for verification. Similar to existing networks, if the stored code is verified, users will be able to access its source code and interact with its contract instances through query/execute with generated JSON Schema, making it more user-friendly.
+
+[See more in JSON Schema](https://docs.alleslabs.com/developers/cosmwasm/codes/attach-json-schema)
+
+## Submit Request for Code Verification
+
+### Prerequisite
+
+To submit a request for verification, users need to provide the following detailed information to ensure a smooth and efficient verification process:
+
+1. **GitHub Repository URL**: The link to the specific GitHub repository where the project is hosted.
+2. **GitHub Latest Commit Hash**: The identifier for the **most recent** commit. 
+3. **Packages Name**: The exact name as specified in the `Cargo.toml` file. Consistency in naming is required for accurate identification and verification.
+4. **Compiler Version**: The version of the compiler used for the project. This information is necessary for replicating the build environment and verifying the code's functionality under specified conditions.
+
+### How to submit the request
+
+#### Step 1: Access “Verify Code”
+
+There are 3 main navigation path to “Verify Code”
+
+1. **After stored the code:** The system would ask if you would like to verify the code or skip and proceed to instantiate contrct
+<Frame>
+    <img src="/images/user-docs/verifications/wasm/after-stored-code.jpg" />
+</Frame>
+2. **Code Details**
+3. **Contract Details**
+
+<Frame>
+    <img src="/images/user-docs/verifications/wasm/entry-point.jpg" />
+</Frame>
+
+
+#### Step 2: Fill in the required input
+
+<Frame>
+    <img src="/images/user-docs/verifications/wasm/verify-publish-source-code.jpg" />
+</Frame>
+
+As mentioned in the prerequisite action, users need to provide input that indicates the stored code. 
+
+<Note> If there is any incorrect input in the field and the user submits the request, it is likely that the verification will fail. However, users can always resubmit the verification until it succeeds.</Note>
+
+## See Code Verification Progress
+
+<Frame>
+    <img src="/images/user-docs/verifications/wasm/contract-verification-progress.jpg" />
+</Frame>
+
+After submit the request, the verification process could take several hours depending on code complexity as it would proceed with these processes:
+
+1. **Getting Source Code**
+    The system retrieves the source code from the specified GitHub repository using the provided URL and latest commit hash.
+    
+2. **Compiling Source Code**
+    It compiles the source code with the specified compiler version to ensure consistent functionality.
+    
+3. **Comparing The Code Hash**
+    The system generates and compares the code's hash to confirm integrity and match with the deployed contract.
+
+4. **Verification Completed**
+    Upon successful hash comparison, the system completes the verification, allowing access to the verified source code.
+
+<Note>Please note that some contracts might be coded in a way that prevents the JSON Schema from being generated. This means that while the source code is accessible, it won't be possible to instantiate the contract through a JSON Schema. Additionally, its contract instances won't have a JSON Schema to query, execute, or migrate.</Note>
+
+## Verification Status
+There are 4 possible verification statuses for each code, which also reflect on the contract instances for the code.
+
+<Frame>
+    <img src="/images/user-docs/verifications/wasm/status.jpg" />
+</Frame>
+
+1. **Unverified**: This is the default state for any stored codes. Users can verify these codes.
+2. **In Progress:** The viewing code is undergoing the verification process, which might take several hours. You can check which step is currently in progress.
+3. **Verified:** The viewing code verification request has been completed. The source code will be available on the Code Details page. If the schema can be generated, it can be used to instantiate, migrate, query, or execute accordingly.
+4. **Indirectly Verified:** The viewing code shares the same hash with other verified codes. You can access the mentioned verified code to see the source code or use the JSON Schema if available. However, you can submit it for verification to have it verified originally with your own GitHub repository.
+5. **Failed to verify:** The viewing code verification request has failed. This status will not display an icon near the Code ID or Contract Address, unlike other statuses. However, the cause of the verification failure is detailed in the Code Details or Contract Details. By reviewing these details, you can identify the specific step that led to the failure, which will guide you in making the necessary corrections before resubmitting the verification request.

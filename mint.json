@@ -215,7 +215,8 @@
                 "developers/cosmwasm/contracts/admin-actions",
                 "developers/cosmwasm/contracts/instantiated-contracts"
               ]
-            }
+            },
+            "developers/cosmwasm/contract-verification"
           ]
         },
         {
@@ -223,7 +224,8 @@
           "icon": "bone",
           "pages": [
             "developers/initia/move/publish-module",
-            "developers/initia/move/deploy-script"
+            "developers/initia/move/deploy-script",
+            "developers/initia/move/module-verification"
           ]
         }
       ]
