@@ -1,0 +1,64 @@
+---
+title: Contract Details
+icon: file-lines
+---
+
+The **EVM Contract Details** page in InitiaScan provides information about a specific smart contract. It includes:
+
+- **Contract Name and Address**: The top of the page lists the contract's name and blockchain address. You can click at the address to copy.
+- **Label**: A user-defined label for easy identification, which can be set during contract instantiation.
+- **Contract Asset Value:** Display the contract’s currently holding asset value
+
+<Frame>
+    <img src="/images/user-docs/evm/contract-detail.jpg" />
+</Frame>
+
+## Overview
+
+This section may contain a description, asset holdings, and delegation details.
+
+- **Contract Information**: Detailed info such as the creator address, created transaction, and created time.
+    - Created Transactions are available as both Cosmos and EVM transactions, or only as Cosmos transaction, depending on how the contract was created.
+- **Assets:** Display the contract’s currently holding assets, separated in supporting assets and unsupported assets.
+- **Transactions:** A log of all transactions involving the contract, separated into two types of transactions as Cosmos transaction and EVM transaction.
+
+---
+
+## Contract
+
+- **Bytecode**: The deployed contract bytecode that represents the low-level instructions executed by the EVM.
+
+---
+
+## Assets
+
+The "Asset" section of the Account Details page provides a detailed overview of the assets associated with a specific smart contract. This section is divided into:
+
+- **Supported Assets**: Lists all the tokens and assets that are recognized and supported by the contract. Each asset displays its balance and, if available, its equivalent value in a common currency.
+- **Unsupported Assets**: Shows any tokens or assets that are held by the contract but are not officially supported or recognized. These may include less common tokens or those specific to certain functions within the contract such as Factory Token, LP Token, IBC Token, Gamm Token, etc..
+
+---
+
+## **Transactions**
+
+A log of all transactions involving the contract, separated into two types of transactions as Cosmos transaction and EVM transaction.
+
+<Frame>
+    <img src="/images/user-docs/evm/contract-txs.jpg" />
+</Frame>
+
+### Cosmos
+
+- **Transaction Hash**: Unique identifiers for each transaction.
+- **Messages**: Descriptions of the transaction purpose. If the EVM-related message is called, the “EVM” badge will be displayed.
+- **Sender**: The wallet or contract address that initiated the transaction.
+- **Timestamp**: Exact date and time when the transaction was confirmed on the blockchain.
+
+###  EVM
+
+- **Transaction Hash:** Unique identifiers for each transaction. Note that the transaction hash for Cosmos transactions related to EVM transactions differs from the EVM transaction hash.
+- **Method:** A function that performs a specific action within a smart contract. Many methods are displayed in hexadecimal representation due to their machine-readable input format. Some common methods are translated into human-readable terms, such as "transfer," "transfer ERC-20," "created," or "call ERC-20 factory."
+- **Sender:** The address that submit the transaction.
+- **To:** The address involved in or receiving the transaction, which can be either the token recipient or the contract being interacted with.
+    - **Created Contract:** If the system detects a contract created due to the transaction, "Created Contract" will be displayed along with the newly created contract address
+- **Amount:** The value of the transaction, typically displayed in the native cryptocurrency of the blockchain. For token transfers, this field shows the quantity of tokens involved. In cases of contract interactions without direct value transfer, this may appear as zero or reflect any attached fees.

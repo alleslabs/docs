@@ -1,0 +1,40 @@
+---
+title: Transaction Details
+icon: file-lines
+---
+
+The **EVM Transaction Details** page on InitiaScan provide the details that similar to other EVM networks. However, the MiniEVM network transactions are always the result of the Cosmos Transaction. So that the
+
+### **Title Section**
+
+- **Transaction Hash**: A unique identifier for the transaction.
+- **Success Indicator**: Shows whether the transaction was successful.
+
+<Frame>
+    <img src="/images/user-docs/evm/tx-detail.jpg" />
+</Frame>
+
+### **Transaction Generic Information**
+
+- **Network Information**: Specifies the network on which the transaction occurred.
+- **Block Height**: Indicates the blockchain height at which the transaction was recorded.
+- **Amount:** The value of the transaction, typically displayed in the native cryptocurrency of the blockchain. For token transfers, this field shows the quantity of tokens involved. In cases of contract interactions without direct value transfer, this may appear as zero or reflect any attached fees.
+- **Gas Price**: The amount of cryptocurrency paid per unit of gas for transaction processing. This price fluctuates based on network demand.
+- **Gas Usage and Limits:**
+    - **Gas Used by Tx/Gas Limit:** The actual amount of computational effort expended to process the transaction and maximum amount of gas the sender was willing to pay for this transaction.
+- **EIP-1559 Gas Information (Might not appear in some transactions):**
+    - **Base Fee:** The minimum price per unit of gas required for inclusion in this block, which is burned.
+    - **Max Priority Fee:** The maximum additional fee per unit of gas the sender was willing to pay to miners.
+    - **Max Possible Gas Fee:** The absolute maximum fee per unit of gas the sender was willing to pay for this transaction, which includes both the Base Fee and Max Priority Fee but does not exceed their sum.
+
+---
+
+### **Common Transaction Content**
+
+- **Sender:** The address that submits the transaction.
+- **To:** The address involved in or receiving the transaction, which can be either the token recipient or the contract being interacted with.
+    - **Created Contract:** If the system detects a contract created due to the transaction, "Created Contract" will be displayed along with the newly created contract address.
+- **Input Data:** You can view the Input Data in three formats:
+    - **Formatted:** The input data is presented in a structured, array-like format for easier readability.
+    - **Raw:** Raw input data encoded in hexadecimal format, representing low-level machine instructions.
+    - **UTF-8:** Displays input data as readable text when possible. Interprets raw data as UTF-8, useful for identifying readable strings. May appear garbled if data is invalid or contains non-printable characters.

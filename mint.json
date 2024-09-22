@@ -163,6 +163,14 @@
           ]
         },
         {
+          "group": "EVM",
+          "icon": "ethereum",
+          "pages": [
+            "user-guide/evm/contract-detail",
+            "user-guide/evm/transaction-detail"
+          ]
+        },
+        {
           "group": "Osmosis",
           "icon": "vial",
           "pages": [
