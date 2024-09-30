@@ -55,7 +55,7 @@ There are two types of transactions that can show up in the list; **signed trans
 - **Related transactions** are transactions that are initiated by another account, but involve the account. This includes cases where the account is the recipient of the transaction, or generally where the account is involved in the transaction. 
 
 
-{ /* 
+{/*
 The "Transactions" tab on the Account Details page chronicles the activity associated with the user's account. Here's what users can expect to find:
 
 - **Transaction Hash**: Unique identifiers for each transaction.
@@ -67,7 +67,7 @@ You can filter transactions by their relations or specific actions.
 
 - **Filter by Relations:** To show all transactions, only signed transactions, or related transactions
 - **Filter by Actions**: There are 8 specific actions that can be filtered through the dropdown, which are Send Assets, IBC-related, Instantiate Contract, Store Code, Execute, Migrate, Update Admin, and Clear Admin
- */}
+*/}
 
 ### Proposals
 
@@ -77,7 +77,7 @@ You can filter transactions by their relations or specific actions.
 
 This section provides a list of on-chain governance proposals that the account has created. 
 
-{ /* The "Proposals" tab on the Account Details page provides a list of proposals those are proposed by account. This section features:
+{/* The "Proposals" tab on the Account Details page provides a list of proposals those are proposed by account. This section features:
 
 - **Proposal ID**: Unique identifiers for each proposal.
 - **Title/Type**: Titles of the proposals and their proposal messages.
@@ -85,7 +85,7 @@ This section provides a list of on-chain governance proposals that the account h
 - **Voting Ends**: Display the date and time that the voting will end or ended.
 - **Resolved Block Height:** The block height that the proposal has resolved and the including messages was implemented.
 - **Proposer:** The address that proposed the proposal.
- */}
+*/}
 
 ---
 
@@ -188,3 +188,9 @@ Learn more about module in [Module Detail](https://docs.alleslabs.com/user-guide
 </Frame>
 
 {/* The “NFTs” tab on the Account Details page show any NFTs owned by the user's account. For further information, please see [NFT on Account Detail](https://docs.alleslabs.com/user-guide/move/nft/nft-account) */}
+
+---
+
+## MiniEVM
+
+Currently, we support MiniEVM network Account Details by displaying assets and transaction data, which function similarly to other networks. In the "Transactions" tab, the table shows only Cosmos transactions. However, an "EVM" tag appears for transactions involving EVM-related messages.
