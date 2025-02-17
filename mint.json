@@ -237,6 +237,10 @@
           ]
         }
       ]
+    },
+    {
+      "group": "Source Code",
+      "pages": ["developers/source-code/license"]
     }
   ],
   "footerSocials": {
