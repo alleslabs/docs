@@ -27,14 +27,20 @@ Please note that Module Verification is progressing without any involvement from
     │   └── more .move files ...
     └── Move.toml
     ```
-    
+
+<Note>
+**Important file requirements**:
+- Each `.move` file must contain exactly one module
+- The module name must match the file name (e.g., a module named `account` should be in `account.move`)
+- If you have multiple modules in a single file, you must separate them into individual files in order to be verified successfully
+</Note>
 
 If your modules need to call functions from other modules outside the scope of the uploaded modules, such as the standard libraries (0x1), it is essential to include the paths to these modules within the `Move.toml` file. Failure to do so will result in verification failure. Notable cases where this is necessary include:
 
 - 0x1
 - GitHub links to external modules
 
-Here is an example of a `Move.toml` configuration file for a project:
+Here is an example of a `Move.toml` configuration file for a project:
 
 ```toml
 [package]
